@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de-CH" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MySchool Datenschutz</title>
+<meta name="description" content="Welche Daten MySchool speichert, welche den Mac verlassen und wohin.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .d-mac { fill: var(--grund); stroke: var(--linie); }
+  .d-box { fill: var(--karte); stroke: var(--linie); }
+  .d-app { fill: var(--akzent-weich); stroke: var(--akzent); }
+  .d-ext { fill: var(--karte); stroke: var(--text-3); }
+  .d-opt { fill: var(--karte); stroke: var(--text-3); stroke-dasharray: 5 4; }
+  .d-t { fill: var(--text); font: 600 14px -apple-system, BlinkMacSystemFont, sans-serif; }
+  .d-s { fill: var(--text-2); font: 12px -apple-system, BlinkMacSystemFont, sans-serif; }
+  .d-k { fill: var(--text-3); font: 600 12px -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: .06em; }
+  .d-l { stroke: var(--text-3); stroke-width: 1.5; fill: none; }
+  .d-lo { stroke: var(--text-3); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+  .d-la { stroke: var(--akzent); stroke-width: 2; fill: none; }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="index.html"><img src="img/icon.png" alt="">MySchool</a>
+    <nav class="navi">
+      <a href="index.html">Vorstellung</a>
+      <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+      <a href="architektur.html">Architektur</a>
+      <a href="MySchool-Vorstellung.pdf">PDF</a>
+    </nav>
+  </div>
+</header>
+
+<main class="textseite">
+  <div class="huelle">
+    <span class="pille moos">Datenschutz</span>
+    <h1 style="margin-top:14px">Wohin gehen die Daten?</h1>
+    <p>MySchool arbeitet mit Personendaten von Schüler:innen, Eltern und Lehrpersonen. Diese Seite zeigt, was die App speichert, welche Verbindungen nach aussen es gibt und was bewusst auf dem Mac bleibt.</p>
+
+    <h2>Überblick</h2>
+    <div class="diagramm">
+      <svg viewBox="0 0 860 470" role="img" aria-label="Datenfluss: Die App und ihre Datenbank liegen auf dem Mac. Verbindungen nach aussen gehen zum Intranet, optional zu iCloud, als Mail an eingeladene Personen und über macOS zu den Kalender-Konten.">
+        <rect class="d-mac" x="10" y="10" width="440" height="450" rx="18"/>
+        <text class="d-k" x="32" y="40">DEIN MAC</text>
+
+        <rect class="d-app" x="32" y="60" width="190" height="64" rx="12"/>
+        <text class="d-t" x="48" y="88">MySchool</text>
+        <text class="d-s" x="48" y="108">die App</text>
+
+        <rect class="d-box" x="242" y="60" width="186" height="64" rx="12"/>
+        <text class="d-t" x="258" y="88">Datenbank</text>
+        <text class="d-s" x="258" y="108">Quelle der Wahrheit</text>
+        <path class="d-la" d="M222 92h20"/>
+
+        <rect class="d-box" x="32" y="144" width="190" height="64" rx="12"/>
+        <text class="d-t" x="48" y="172">Helfer in der Menüleiste</text>
+        <text class="d-s" x="48" y="192">Mitteilungen, Erfassen</text>
+
+        <rect class="d-box" x="242" y="144" width="186" height="64" rx="12"/>
+        <text class="d-t" x="258" y="172">Schlüsselbund</text>
+        <text class="d-s" x="258" y="192">Passwörter</text>
+
+        <rect class="d-box" x="32" y="228" width="190" height="64" rx="12"/>
+        <text class="d-t" x="48" y="256">Apple Intelligence</text>
+        <text class="d-s" x="48" y="276">KI auf dem Gerät</text>
+
+        <rect class="d-box" x="242" y="228" width="186" height="64" rx="12"/>
+        <text class="d-t" x="258" y="256">Kalender, Kontakte</text>
+        <text class="d-s" x="258" y="276">von macOS verwaltet</text>
+
+        <rect class="d-box" x="32" y="312" width="190" height="64" rx="12"/>
+        <text class="d-t" x="48" y="340">Mail-Programm</text>
+        <text class="d-s" x="48" y="360">liest und sendet lokal</text>
+
+        <rect class="d-box" x="242" y="312" width="186" height="64" rx="12"/>
+        <text class="d-t" x="258" y="340">Schreib-Protokoll</text>
+        <text class="d-s" x="258" y="360">jede Aktion im Intranet</text>
+
+        <text class="d-s" x="32" y="420">Durchgezogen: Normalbetrieb.</text>
+        <text class="d-s" x="32" y="440">Gestrichelt: nur, wenn eingeschaltet.</text>
+
+        <!-- externe Ziele -->
+        <rect class="d-ext" x="560" y="60" width="290" height="64" rx="12"/>
+        <text class="d-t" x="578" y="88">Intranet der Schule</text>
+        <text class="d-s" x="578" y="108">Sync und Schreibaktionen</text>
+        <path class="d-l" d="M450 92 H560"/>
+
+        <rect class="d-opt" x="560" y="144" width="290" height="64" rx="12"/>
+        <text class="d-t" x="578" y="172">iCloud (privat)</text>
+        <text class="d-s" x="578" y="192">Backup und Geräte-Sync, falls eingeschaltet</text>
+        <path class="d-lo" d="M450 176 H560"/>
+
+        <rect class="d-ext" x="560" y="228" width="290" height="64" rx="12"/>
+        <text class="d-t" x="578" y="256">Eingeladene Personen</text>
+        <text class="d-s" x="578" y="276">Termin-Einladung per Mail</text>
+        <path class="d-l" d="M450 260 H560"/>
+
+        <rect class="d-ext" x="560" y="312" width="290" height="64" rx="12"/>
+        <text class="d-t" x="578" y="340">Kalender-Konten</text>
+        <text class="d-s" x="578" y="360">iCloud, Exchange, Google (via macOS)</text>
+        <path class="d-l" d="M450 344 H560"/>
+      </svg>
+    </div>
+
+    <h2>Verbindungen nach aussen</h2>
+    <div class="tabelle">
+      <table>
+        <thead><tr><th>Ziel</th><th>Was geht raus</th><th>Wann</th><th>Abschaltbar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Intranet der Schule</strong></td><td>Anmeldung; beim Schreiben: Lektionsbestätigung, Absenzen, Hausaufgaben, Noten, Zimmer-Reservationen</td><td>Sync (stündlich, täglich, wöchentlich) und eigene Schreibaktionen</td><td>Schreiben nur nach Bestätigung, mit Protokoll</td></tr>
+          <tr><td><strong>iCloud</strong></td><td>die ganze Datenbank, in die private iCloud der Lehrperson</td><td>nur wenn eingeschaltet</td><td>ja, standardmässig aus</td></tr>
+          <tr><td><strong>Eingeladene Personen</strong></td><td>Titel, Zeit und Ort eines Termins per Mail</td><td>Einladen, Verschieben, Absagen</td><td>nur bei gewählten Personen</td></tr>
+          <tr><td><strong>Teams</strong></td><td>Mailadressen in einem Link, der die Teams-App öffnet</td><td>Klick auf „Teams-Chat"</td><td>–</td></tr>
+          <tr><td><strong>Karten</strong></td><td>eine Adresse als Link</td><td>Klick auf eine Adresse</td><td>–</td></tr>
+          <tr><td><strong>Schulkalender</strong></td><td>nichts Persönliches, nur der Abruf des Kalenders</td><td>täglich</td><td>–</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Was bewusst auf dem Mac bleibt</h2>
+    <ul>
+      <li><strong>KI:</strong> Notiz-Zusammenfassungen, Mail-Auswertung und Schnellerfassung laufen mit Apple Intelligence auf dem Gerät. Der Text verlässt den Mac nicht.</li>
+      <li><strong>Mail:</strong> Die App liest Mails aus dem Mail-Programm auf dem Mac. Sie hat keinen eigenen Zugang zu Mailservern.</li>
+      <li><strong>Kalender und Kontakte</strong> laufen über macOS. Die Synchronisation mit den Konten dahinter besorgt das System, nicht MySchool.</li>
+      <li><strong>Zugangsdaten</strong> liegen nur im Schlüsselbund. Anzeigen lassen sie sich nur mit Touch ID.</li>
+      <li><strong>Mitteilungen</strong> sind lokale Mitteilungen von macOS, ohne Push-Dienst.</li>
+      <li><strong>Sensible Intranet-Felder</strong> wie AHV-Nummer, Heimatort oder Zivilstand werden nie gespeichert.</li>
+    </ul>
+
+    <h2>Was die App speichert</h2>
+    <p>Aus dem Intranet: Klassen, Schüler:innen (Name, Klasse, Mail, Telefon, Adresse, Foto, Geburtstag), Eltern, Lehrpersonen, Stundenplan, Absenzen, Hausaufgaben und Schulkalender. Noten werden nicht gespeichert, sie kommen jedes Mal live aus dem Intranet.</p>
+    <p>Eigene Daten: Notizen, Listen, Sitzordnungen, Ämtli, Punkte von Prüfungen, Einladungen sowie Termin-Vorschläge aus dem Mail-Scan (Absender, Betreff, Auszug).</p>
+
+    <h2>Auf dem Beamer</h2>
+    <p>Liegt ein Fenster auf einem Beamer oder externen Bildschirm, blendet MySchool Noten, Notizen, Absenzen, Fotos und Kontaktdaten aus. Für Bildschirmfreigaben in Teams oder Zoom lässt sich der Präsentationsmodus von Hand einschalten.</p>
+
+    <h2>Offene Punkte</h2>
+    <ul>
+      <li>Mit eingeschaltetem iCloud-Sync geht die ganze Datenbank in die private iCloud, auch Notizen und Mail-Auszüge. Ob das für Schülerdaten zulässig ist, ist noch abzuklären. Der Sync ist standardmässig aus.</li>
+      <li>Ein Löschkonzept für ehemalige Schüler:innen und archivierte Klassen fehlt noch.</li>
+      <li>Der Diagnosebericht für die Fehlersuche enthält Namen und soll pseudonymisiert werden.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <span>MySchool · Mac-App für den Schulalltag</span>
+    <span><a href="index.html">Zur Vorstellung</a></span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* MySchool — Website. Farben aus der App-Palette „Fantastic Mr. Fox". */
+:root {
+  --akzent: #D95B0F;
+  --akzent-weich: #FBE9DD;
+  --moos: #556E1E;
+  --moos-weich: #EAF0DC;
+  --himmel: #1B93BE;
+  --himmel-weich: #E1F1F7;
+  --rost: #B0261F;
+  --rost-weich: #F7E1DF;
+  --text: #1D1D1F;
+  --text-2: #5A5A60;
+  --text-3: #8A8A90;
+  --flaeche: #FFFFFF;
+  --grund: #F6F4F1;
+  --karte: #FFFFFF;
+  --linie: #E6E2DC;
+  --leiste: #202022;
+  --schatten: 0 1px 2px rgba(0,0,0,.06), 0 12px 40px rgba(60,40,20,.14);
+  --radius: 14px;
+  --max: 1120px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --akzent: #EC7024; --akzent-weich: #3A2517;
+    --moos: #74952C; --moos-weich: #26301A;
+    --himmel: #25ACDD; --himmel-weich: #16303A;
+    --rost: #DB605A; --rost-weich: #3A1F1D;
+    --text: #F2F2F4; --text-2: #B4B4BA; --text-3: #85858C;
+    --flaeche: #19191B; --grund: #121213; --karte: #1F1F22; --linie: #2E2E32;
+    --schatten: 0 1px 2px rgba(0,0,0,.4), 0 12px 40px rgba(0,0,0,.5);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; overflow-x: hidden; background: var(--grund); color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--akzent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.02em; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; }
+h3 { font-size: 1.2rem; font-weight: 650; }
+p { margin: 0; }
+
+.huelle { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* Kopf: dunkle Leiste wie die Seitenleiste der App */
+.kopf { background: var(--leiste); color: #F2F2F4; position: sticky; top: 0; z-index: 10; }
+.kopf .huelle { display: flex; align-items: center; gap: 24px; height: 60px; }
+.marke { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 650; font-size: 1.05rem; }
+.marke:hover { text-decoration: none; }
+.marke img { width: 30px; height: 30px; border-radius: 7px; }
+.navi { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
+.navi a { color: #D8D8DC; padding: 6px 12px; border-radius: 8px; font-size: .95rem; }
+.navi a:hover { background: rgba(255,255,255,.08); text-decoration: none; }
+.navi a[aria-current="page"] { background: rgba(217,91,15,.28); color: #FFB98C; }
+
+/* Pillen wie in der App */
+.pille { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .8rem; font-weight: 600;
+  background: var(--akzent-weich); color: var(--akzent); white-space: nowrap; }
+.pille.moos { background: var(--moos-weich); color: var(--moos); }
+.pille.himmel { background: var(--himmel-weich); color: var(--himmel); }
+.pille.rost { background: var(--rost-weich); color: var(--rost); }
+
+/* Held */
+.held { padding: 72px 0 40px; text-align: center; }
+.held .pille { margin-bottom: 18px; }
+.held h1 span { color: var(--akzent); }
+.held .lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--text-2); max-width: 720px; margin: 20px auto 0; }
+.knoepfe { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+.knopf { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 10px; font-weight: 600;
+  background: var(--akzent); color: #fff; }
+.knopf:hover { text-decoration: none; filter: brightness(1.06); }
+.knopf.leise { background: var(--akzent-weich); color: var(--akzent); }
+
+/* Fenster-Rahmen für Screenshots */
+.fenster { border-radius: 12px; overflow: hidden; box-shadow: var(--schatten); background: var(--flaeche);
+  border: 1px solid var(--linie); }
+.held .fenster { margin-top: 48px; }
+
+/* Abschnitte */
+.abschnitt { padding: 72px 0; }
+.abschnitt.hell { background: var(--flaeche); }
+.kicker { color: var(--akzent); font-weight: 650; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.abschnitt-kopf { max-width: 760px; margin-bottom: 40px; }
+.abschnitt-kopf p { color: var(--text-2); margin-top: 14px; font-size: 1.08rem; }
+
+.zwei { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
+.drei { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.karte { background: var(--karte); border: 1px solid var(--linie); border-radius: var(--radius); padding: 24px; }
+.karte h3 { margin-bottom: 8px; }
+.karte p { color: var(--text-2); }
+.karte .symbol { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--akzent-weich); color: var(--akzent); margin-bottom: 14px; }
+.karte .symbol svg { width: 22px; height: 22px; }
+.karte.moos .symbol { background: var(--moos-weich); color: var(--moos); }
+.karte.himmel .symbol { background: var(--himmel-weich); color: var(--himmel); }
+.karte.rost .symbol { background: var(--rost-weich); color: var(--rost); }
+
+/* Funktion: Text + Bild */
+.funktion { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 48px; align-items: center; padding: 40px 0; }
+.funktion.umgekehrt { grid-template-columns: minmax(0,7fr) minmax(0,5fr); }
+.funktion.umgekehrt .text { order: 2; }
+.funktion .text h3 { font-size: 1.6rem; margin-bottom: 12px; }
+.funktion .text p { color: var(--text-2); }
+.funktion ul { margin: 16px 0 0; padding: 0; list-style: none; }
+.funktion li { padding: 6px 0 6px 26px; position: relative; color: var(--text-2); }
+.funktion li::before { content: ""; position: absolute; left: 4px; top: 14px; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--akzent); }
+
+/* Kombi-Karten („Mehr als die Summe der Daten") */
+.karte.kombi { display: flex; flex-direction: column; }
+.karte.kombi p { flex: 1; }
+.quellen { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.quellen .pille { font-size: .72rem; }
+.nachsatz { margin-top: 28px; color: var(--text-2); max-width: 820px; }
+
+/* Vorher / Nachher */
+.vergleich { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
+.vergleich figure { margin: 0; }
+.vergleich figcaption { margin-top: 12px; color: var(--text-2); font-size: .95rem; display: flex; gap: 8px; align-items: center; }
+
+/* Tastenkürzel */
+kbd { font: 600 .85em -apple-system, BlinkMacSystemFont, sans-serif; background: var(--karte); border: 1px solid var(--linie);
+  border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; color: var(--text); }
+
+/* Liste „nicht" */
+.nicht { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.nicht div { display: flex; gap: 14px; align-items: flex-start; }
+.nicht b { display: block; }
+.nicht span { color: var(--text-2); }
+.nicht .x { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--rost-weich); color: var(--rost);
+  display: grid; place-items: center; font-weight: 700; }
+
+/* Text-Seiten (Datenschutz, Architektur) */
+.textseite { padding: 56px 0 80px; }
+.textseite .huelle { max-width: 900px; }
+.textseite h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 14px; }
+.textseite h2 { font-size: 1.5rem; margin: 48px 0 14px; }
+.textseite p, .textseite li { color: var(--text-2); }
+.textseite p + p { margin-top: 12px; }
+.textseite ul { padding-left: 22px; }
+.textseite li { margin: 6px 0; }
+.textseite strong { color: var(--text); }
+table { width: 100%; border-collapse: collapse; background: var(--karte); border: 1px solid var(--linie);
+  border-radius: var(--radius); overflow: hidden; font-size: .95rem; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+th { background: var(--grund); font-weight: 650; color: var(--text); }
+td { color: var(--text-2); }
+tr:last-child td { border-bottom: 0; }
+.tabelle { overflow-x: auto; }
+.diagramm { background: var(--karte); border: 1px solid var(--linie); border-radius: var(--radius); padding: 24px; }
+.diagramm svg { width: 100%; height: auto; display: block; }
+.hinweis { background: var(--akzent-weich); border-radius: var(--radius); padding: 16px 20px; color: var(--text); margin: 20px 0; }
+
+/* Fuss */
+.fuss { background: var(--leiste); color: #A9A9AF; padding: 32px 0; font-size: .9rem; }
+.fuss .huelle { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.fuss a { color: #FFB98C; }
+
+@media screen and (max-width: 860px) {
+  .zwei, .drei, .vergleich, .nicht, .funktion, .funktion.umgekehrt { grid-template-columns: minmax(0,1fr); }
+  .funktion.umgekehrt .text { order: 0; }
+  .funktion { gap: 24px; }
+  .abschnitt { padding: 52px 0; }
+  .huelle { padding: 0 16px; }
+  .kopf .huelle { height: auto; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .navi { margin-left: 0; }
+}
+
+/* Druck / PDF */
+@media print {
+  @page { size: A4; margin: 14mm 14mm; }
+  :root { --grund: #fff; }
+  body { font-size: 11pt; background: #fff; }
+  .kopf, .knoepfe, .nur-web { display: none !important; }
+  .held { padding: 0 0 12px; }
+  .abschnitt { padding: 20px 0; }
+  .abschnitt.hell { background: #fff; }
+  .funktion, .vergleich figure, .karte, .fenster, table, .diagramm { break-inside: avoid; }
+  h1 { font-size: 26pt; } h2 { font-size: 17pt; }
+  h2, .abschnitt-kopf, .kicker { break-after: avoid; }
+  .vergleich, .nicht, .drei { break-inside: avoid; }
+  .abschnitt > .huelle { break-inside: avoid; }
+  #mehr > .huelle, #mehr .drei { break-inside: auto; }
+  .nachsatz { break-before: avoid; }
+  #mehr .drei { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .held .lead, .abschnitt-kopf p { font-size: 11pt; }
+  .held .fenster { margin-top: 18px; }
+  .abschnitt-kopf { margin-bottom: 16px; }
+  .funktion { gap: 22px; padding: 14px 0; }
+  .funktion .text h3 { font-size: 14pt; }
+  .funktion li { padding: 2px 0 2px 20px; }
+  .funktion li::before { top: 9px; }
+  .drei { gap: 10px; }
+  .karte { padding: 12px 14px; }
+  .karte .symbol { width: 28px; height: 28px; margin-bottom: 6px; }
+  .karte .symbol svg { width: 16px; height: 16px; }
+  .fenster { box-shadow: none; }
+  .seitenumbruch { break-before: page; }
+  .fuss { background: #fff; color: #666; border-top: 1px solid #ddd; }
+  .fuss a { color: #666; }
+  a { color: inherit; }
+}

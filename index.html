@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="de-CH" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MySchool</title>
+<meta name="description" content="MySchool – der Schulalltag einer Lehrperson in einer Mac-App: Stundenplan, Klassen, Absenzen, Notizen und Termine an einem Ort, offline-first und mit den Daten auf dem eigenen Gerät.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="index.html"><img src="img/icon.png" alt="">MySchool</a>
+    <nav class="navi">
+      <a href="index.html" aria-current="page">Vorstellung</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="architektur.html">Architektur</a>
+      <a href="MySchool-Vorstellung.pdf">PDF</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="held">
+    <div class="huelle">
+      <span class="pille">Mac-App für Lehrpersonen</span>
+      <h1>Der Schulalltag <span>in einer App.</span></h1>
+      <p class="lead">Stundenplan, Klassen, Absenzen, Notizen und Termine an einem Ort. Direkt verbunden mit dem Intranet der Schule, auch ohne Netz nutzbar, und die Daten bleiben auf dem eigenen Mac.</p>
+      <div class="knoepfe">
+        <a class="knopf" href="#funktionen">Was die App kann</a>
+        <a class="knopf leise" href="datenschutz.html">Wohin gehen die Daten?</a>
+      </div>
+      <div class="fenster"><img src="img/heute.webp" width="2000" height="1207" alt="Die Heute-Ansicht: Lektionen des Tages, ein erkanntes Absenzenmuster, eine fällige Notiz-Erinnerung, kommende Geburtstage und neue Einträge aus dem Schulkalender."></div>
+    </div>
+  </section>
+
+  <section class="abschnitt hell">
+    <div class="huelle zwei">
+      <div>
+        <div class="kicker">Das Problem</div>
+        <h2>Sechs Werkzeuge für einen Schultag</h2>
+        <p style="margin-top:16px;color:var(--text-2)">Das Intranet für Stundenplan, Klassenbuch, Absenzen und Noten. Mail und Kalender für Termine. Tabellen für Rückläufe und Bezahlungen. Zettel für Beobachtungen, das Handy für Erinnerungen. Jedes kann seinen Teil, keines kennt die anderen. Und im Schulzimmer ist das Intranet oft gerade langsam, abgemeldet oder offline.</p>
+      </div>
+      <div>
+        <div class="kicker">Die Idee</div>
+        <h2>Einmal holen, überall nutzen</h2>
+        <p style="margin-top:16px;color:var(--text-2)">MySchool holt Klassen, Schüler:innen, Stundenplan, Absenzen und Schulkalender aus dem Intranet und hält sie lokal. Darauf baut alles auf, was das Intranet nicht kann: Notizen zu Personen, Erinnerungen, Listen, Sitzordnungen und ein Tag auf einen Blick. Was zurück ins Intranet gehört, geht mit einem Klick, und ohne Netz holt die App es später nach.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="funktionen">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Funktionen</div>
+        <h2>Was MySchool kann</h2>
+        <p>Alle Bilder stammen aus einer Demo-Version mit erfundenen Klassen und Personen.</p>
+      </div>
+
+      <div class="funktion">
+        <div class="text">
+          <span class="pille">Heute</span>
+          <h3 style="margin-top:12px">Der Tag auf einen Blick</h3>
+          <p>Am Morgen einmal hinschauen und wissen, was ansteht.</p>
+          <ul>
+            <li>Lektionen des Tages mit Absenzen und Bestätigen-Knopf</li>
+            <li>Auffällige Absenzenmuster, etwa verpasste Prüfungen</li>
+            <li>Fällige Notiz-Erinnerungen und Geburtstage</li>
+            <li>Neue Einträge im Schulkalender zum Bestätigen</li>
+          </ul>
+        </div>
+        <div class="fenster"><img src="img/heute.webp" width="2000" height="1207" alt="Heute-Ansicht"></div>
+      </div>
+
+      <div class="funktion umgekehrt">
+        <div class="text">
+          <span class="pille himmel">Kalender</span>
+          <h3 style="margin-top:12px">Stundenplan und Termine in einem Raster</h3>
+          <p>Eigene Lektionen, Schulkalender und die eigenen Kalender (iCloud, Exchange, Google) in einer Woche. Prüfungen und Ausfälle sind markiert, Geburtstage stehen im Tageskopf.</p>
+          <ul>
+            <li>Termine per Drag &amp; Drop verschieben</li>
+            <li>Personen aus den Klassenlisten einladen</li>
+            <li>Freie Zimmer finden und reservieren</li>
+            <li>Gemeinsame freie Zeit mit Kolleg:innen suchen</li>
+          </ul>
+        </div>
+        <div class="fenster"><img src="img/kalender.webp" width="2000" height="1207" alt="Wochenkalender mit Lektionen, einer Prüfung, einem Ausfall und einem Konvent"></div>
+      </div>
+
+      <div class="funktion">
+        <div class="text">
+          <span class="pille moos">Lektionen &amp; Absenzen</span>
+          <h3 style="margin-top:12px">Klassenbuch ohne Umweg</h3>
+          <p>Lektion bestätigen, Absenz erfassen, Hausaufgabe eintragen, direkt aus der Liste. Ohne Netz landet der Auftrag in einer Warteschlange und geht raus, sobald die Verbindung wieder steht.</p>
+        </div>
+        <div class="fenster"><img src="img/lektionen.webp" width="2000" height="1207" alt="Lektionenliste mit Hausaufgaben, Absenzen und Bestätigen-Knöpfen"></div>
+      </div>
+
+      <div class="funktion umgekehrt">
+        <div class="text">
+          <span class="pille moos">Klassenlehrperson</span>
+          <h3 style="margin-top:12px">Die ganze Klasse im Raster</h3>
+          <p>Alle Absenzen des Semesters, eine Zeile pro Person. Die Legende ist zugleich Filter: Ein Klick auf „offen" hebt genau diese Einträge hervor. Muster wie „fehlt oft am Montagmorgen" oder „fehlt vor Prüfungen" erkennt die App selbst.</p>
+        </div>
+        <div class="fenster"><img src="img/klassenraster.webp" width="2000" height="1207" alt="Absenzen-Raster einer Klasse über das Semester"></div>
+      </div>
+
+      <div class="funktion">
+        <div class="text">
+          <span class="pille">Klassen</span>
+          <h3 style="margin-top:12px">Alles zur Klasse an einem Ort</h3>
+          <p>Klassenliste mit Ämtli, Hinweisen, Nachteilsausgleichen und Geburtstagen. Dazu Mail an die Klasse oder die Eltern, Klassenspiegel als PDF, Listen und Notizen.</p>
+        </div>
+        <div class="fenster"><img src="img/klasse.webp" width="2000" height="1207" alt="Klassenübersicht mit Notizen und Schülertabelle"></div>
+      </div>
+
+      <div class="funktion umgekehrt">
+        <div class="text">
+          <span class="pille">Sitzordnung</span>
+          <h3 style="margin-top:12px">Sitzplan in einer Minute</h3>
+          <p>Pulte anordnen, automatisch verteilen (zufällig oder abwechselnd), von Hand umsetzen, als PDF drucken. Dazu Ämtli und ein Glücksrad für die Zufallsauswahl.</p>
+        </div>
+        <div class="fenster"><img src="img/sitzordnung.webp" width="2000" height="1207" alt="Sitzordnung einer Klasse mit Lehrerpult"></div>
+      </div>
+
+      <div class="funktion">
+        <div class="text">
+          <span class="pille himmel">Notizen</span>
+          <h3 style="margin-top:12px">Beobachtungen, die man wiederfindet</h3>
+          <p>Notizen zu Schüler:innen, Klassen, Kursen oder einzelnen Lektionen. Suche über Namen, Tags und Text.</p>
+          <ul>
+            <li>Tags wie „Beobachtung" oder „Elterngespräch", frei wählbar und farbig</li>
+            <li>Tag-Schwellen: Häufen sich zu einer Person Notizen mit einem Tag (z.B. dreimal „Nachfragen"), meldet sich „Heute"</li>
+            <li>Erinnerungen einmalig, wöchentlich, monatlich oder im Takt der Lektionen</li>
+            <li>Checklisten direkt im Text</li>
+          </ul>
+        </div>
+        <div class="fenster"><img src="img/notizen.webp" width="2000" height="1207" alt="Notizenliste mit Tags und einer geöffneten Notiz mit Checkliste"></div>
+      </div>
+
+      <div class="funktion umgekehrt">
+        <div class="text">
+          <span class="pille himmel">KI auf dem Gerät</span>
+          <h3 style="margin-top:12px">Zusammenfassung statt Durchlesen</h3>
+          <p>Viele Notizen zu einer Person fasst Apple Intelligence in ein paar Sätzen zusammen. Das Modell läuft auf dem Mac, kein Text geht an einen KI-Dienst.</p>
+        </div>
+        <div class="fenster"><img src="img/profil_detail.webp" width="1480" height="1150" alt="Profil einer Schülerin mit KI-Zusammenfassung der Notizen"></div>
+      </div>
+
+      <div class="funktion">
+        <div class="text">
+          <span class="pille">Listen</span>
+          <h3 style="margin-top:12px">Rückläufe und Bezahlungen</h3>
+          <p>Häkchen, Beträge, Auswahl oder Text pro Person. Wer noch fehlt, erscheint in „Heute" und bekommt auf Wunsch eine Sammel-Mail. Eine Spalte lässt sich als Notenspalte ins Intranet übernehmen.</p>
+        </div>
+        <div class="fenster"><img src="img/listen.webp" width="2000" height="1207" alt="Liste für eine Exkursion mit Beitrag und Einverständnis"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="mehr">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Mehr als die Summe der Daten</div>
+        <h2>Was erst durch den Sync möglich wird</h2>
+        <p>MySchool holt die Daten aus dem Intranet und verknüpft sie miteinander, mit dem eigenen Kalender und mit eigenen Notizen. Daraus entstehen Funktionen, die es in keinem einzelnen Werkzeug gibt. Die Pillen zeigen, welche Daten jeweils zusammenkommen.</p>
+      </div>
+      <div class="drei">
+        <div class="karte kombi">
+          <h3>Absenzenmuster erkennen</h3>
+          <p>Wer oft am Montagmorgen fehlt, in einem Fach auffällig viel oder gehäuft vor Prüfungen: MySchool wertet das ganze Semester aus und meldet es in „Heute".</p>
+          <div class="quellen"><span class="pille moos">Absenzen</span> <span class="pille moos">Stundenplan</span> <span class="pille moos">Prüfungen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Prüfungs-Check</h3>
+          <p>Wer heute in einer Prüfung sitzt, aber in den Lektionen davor gefehlt hat, erscheint als Hinweis – bevor man die Prüfung verteilt.</p>
+          <div class="quellen"><span class="pille moos">Absenzen</span> <span class="pille moos">Prüfungen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Prüfungen der ganzen Klasse</h3>
+          <p>Beim Planen einer Prüfung sieht man, welche Prüfungen die Schüler:innen in derselben Woche schon in anderen Fächern haben.</p>
+          <div class="quellen"><span class="pille himmel">Stundenplan</span> <span class="pille himmel">Prüfungen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Gemeinsamen Termin finden</h3>
+          <p>Freie Zeitfenster über den eigenen Stundenplan, die Stundenpläne von Kolleg:innen und die eigenen Kalender hinweg, bewertet und sortiert.</p>
+          <div class="quellen"><span class="pille himmel">Stundenpläne</span> <span class="pille himmel">Kalender</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Lektion verschieben oder tauschen</h3>
+          <p>Der Tausch-Assistent schlägt Lektionen anderer Lehrpersonen derselben Klasse vor und prüft, ob beide Seiten frei sind. Den Mail-Entwurf gibt es dazu.</p>
+          <div class="quellen"><span class="pille himmel">Stundenpläne</span> <span class="pille himmel">Lehrpersonen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Freie Zimmer auf einen Blick</h3>
+          <p>Für einen Tag und eine Lektion zeigt MySchool alle freien und belegten Zimmer; ausfallende Lektionen zählen als frei. Reservieren geht direkt.</p>
+          <div class="quellen"><span class="pille himmel">Stundenplan</span> <span class="pille himmel">Zimmer</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Stundenplan und private Termine zusammen</h3>
+          <p>Lektionen, Schulkalender und die eigenen Kalender in einer Woche, mit Mitteilungen vor Lektionen, Prüfungen und Terminen.</p>
+          <div class="quellen"><span class="pille ">Stundenplan</span> <span class="pille ">Schulkalender</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Schulkalender nur für die eigenen Klassen</h3>
+          <p>Neue Einträge im Schulkalender werden den eigenen Klassen zugeordnet und landen zum Bestätigen in „Heute", auch über den Schuljahreswechsel hinweg.</p>
+          <div class="quellen"><span class="pille ">Schulkalender</span> <span class="pille ">Klassen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Geburtstage, wenn man die Klasse sieht</h3>
+          <p>Die Erinnerung kommt an einem Tag, an dem man die Klasse tatsächlich unterrichtet, mit Mail- und Chat-Knopf.</p>
+          <div class="quellen"><span class="pille ">Schüler:innen</span> <span class="pille ">Stundenplan</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Prüfung mit Punkten auswerten</h3>
+          <p>Punkte pro Aufgabe erfassen, Notenskala wählen, Noten direkt ins Notenbuch übertragen. Eine Liste wird mit einem Klick zur Notenspalte.</p>
+          <div class="quellen"><span class="pille ">Notenbuch</span> <span class="pille ">Klassenliste</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Klassenliste mit Fotos weiterverwenden</h3>
+          <p>Sitzordnung, Glücksrad, Klassenspiegel als PDF und Mail an alle Eltern der Klasse, direkt aus den Intranet-Daten.</p>
+          <div class="quellen"><span class="pille ">Schüler:innen</span> <span class="pille ">Eltern</span> <span class="pille ">Fotos</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Das Schuljahr festhalten</h3>
+          <p>Am Schuljahresende sichert das Archiv Noten und Absenzen der Klasse. Beim Aufsteigen („3b" wird „4b") wandern alle Notizen mit.</p>
+          <div class="quellen"><span class="pille ">Notenbuch</span> <span class="pille ">Absenzen</span> <span class="pille ">Klassen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Hinweise pro Person</h3>
+          <p>Die Klassenliste bündelt pro Schüler:in, was gerade wichtig ist: offene Absenzen, Absenzenmuster, Prüfungs-Check, fällige Notizen und fehlende Rückläufe.</p>
+          <div class="quellen"><span class="pille moos">Absenzen</span> <span class="pille moos">Prüfungen</span> <span class="pille moos">Notizen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Notiz-Erinnerung im Lektionstakt</h3>
+          <p>„Jede zweite Lektion nachfragen": Die Erinnerung richtet sich nach dem Stundenplan und kommt auf Wunsch nur an Tagen, an denen man die Person unterrichtet.</p>
+          <div class="quellen"><span class="pille himmel">Stundenplan</span> <span class="pille himmel">Notizen</span></div>
+        </div>
+        <div class="karte kombi">
+          <h3>Fremde Stundenpläne im Raster</h3>
+          <p>Den Stundenplan einer Klasse oder Lehrperson neben den eigenen legen, etwa für Absprachen oder Stellvertretungen.</p>
+          <div class="quellen"><span class="pille himmel">Stundenpläne</span></div>
+        </div>
+      </div>
+      <p class="nachsatz">Dazu das, was ein Web-Intranet grundsätzlich nicht kann: alles offline verfügbar, Schreibaufträge in einer Warteschlange, Suche über alles mit <kbd>⌘</kbd> <kbd>K</kbd>, Mitteilungen auch bei geschlossener App und der Präsentationsmodus am Beamer.</p>
+    </div>
+  </section>
+
+  <section class="abschnitt hell">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Schnell</div>
+        <h2>Tippen statt klicken</h2>
+        <p><kbd>⌘</kbd> <kbd>K</kbd> springt zu jeder Person, Klasse oder Lektion und nimmt Kurzbefehle an: „Prüfung 4a Freitag", „HA 3b bis Fr: Serie 6". Mit <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd> geht dasselbe von überall auf dem Mac, auch wenn MySchool geschlossen ist.</p>
+      </div>
+      <div class="fenster"><img src="img/palette.webp" width="2000" height="1207" alt="Befehlspalette: aus „HA 3b bis Fr: Serie 6" wird eine Hausaufgabe für die nächste Lektion"></div>
+    </div>
+  </section>
+
+  <section class="abschnitt">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Präsentationsmodus</div>
+        <h2>Beamer an, Vertrauliches weg</h2>
+        <p>Sobald ein Fenster auf dem Beamer liegt, blendet MySchool Noten, Notizen, Absenzen, Fotos und Kontaktdaten aus. Auf dem eigenen Bildschirm bleibt alles sichtbar. Für Bildschirmfreigaben in Teams oder Zoom lässt sich der Modus von Hand einschalten.</p>
+      </div>
+      <div class="vergleich">
+        <figure>
+          <div class="fenster"><img src="img/profil_detail.webp" width="1480" height="1150" alt="Profil auf dem eigenen Bildschirm, mit Zusammenfassung und Kontaktdaten"></div>
+          <figcaption><span class="pille moos">Eigener Bildschirm</span> alles sichtbar</figcaption>
+        </figure>
+        <figure>
+          <div class="fenster"><img src="img/praesentation_profil_detail.webp" width="1480" height="1150" alt="Dasselbe Profil im Präsentationsmodus: Notizen, Kontakt und Absenzen sind verborgen"></div>
+          <figcaption><span class="pille rost">Beamer</span> Notizen, Kontakt, Absenzen verborgen</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt hell">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Datenschutz</div>
+        <h2>Die Daten bleiben auf dem Mac</h2>
+        <p>Welche Daten den Mac wohin verlassen, steht ausführlich auf der Seite <a href="datenschutz.html">Datenschutz</a>.</p>
+      </div>
+      <div class="drei">
+        <div class="karte">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+          <h3>Lokal zuerst</h3>
+          <p>Die Datenbank liegt auf dem Mac. Alles funktioniert offline, das Intranet ist Datenquelle, keine Voraussetzung.</p>
+        </div>
+        <div class="karte himmel">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18 9l-4.2 1.3L12 15l-1.8-4.7L6 9l4.2-1.3z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
+          <h3>KI auf dem Gerät</h3>
+          <p>Zusammenfassungen und Mail-Auswertung laufen mit Apple Intelligence lokal. Kein Text geht an einen KI-Dienst.</p>
+        </div>
+        <div class="karte moos">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
+          <h3>Zugangsdaten im Schlüsselbund</h3>
+          <p>Passwörter liegen im macOS-Schlüsselbund, anzeigen nur mit Touch ID.</p>
+        </div>
+        <div class="karte moos">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h6"/></svg></div>
+          <h3>Nur, was nötig ist</h3>
+          <p>AHV-Nummer, Heimatort, Zivilstand und ähnliche Felder werden nie gespeichert.</p>
+        </div>
+        <div class="karte rost">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 17.5A2 2 0 004.1 20.5h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></div>
+          <h3>Schreiben nur bewusst</h3>
+          <p>Beim ersten Schreiben ins Intranet fragt die App nach. Jede Schreibaktion landet in einem Protokoll.</p>
+        </div>
+        <div class="karte">
+          <div class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/></svg></div>
+          <h3>Präsentationsmodus</h3>
+          <p>Auf dem Beamer bleiben Noten, Notizen, Absenzen und Kontaktdaten verborgen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <div class="kicker">Abgrenzung</div>
+        <h2>Was MySchool bewusst nicht ist</h2>
+      </div>
+      <div class="nicht">
+        <div><span class="x">×</span><p><b>Kein Ersatz fürs Intranet</b><span>Das Intranet bleibt die offizielle Quelle. MySchool liest von dort und schreibt nur, was man selbst auslöst.</span></p></div>
+        <div><span class="x">×</span><p><b>Kein Datensammler</b><span>Kein eigener Server, kein Konto, keine Statistik über die Nutzung.</span></p></div>
+        <div><span class="x">×</span><p><b>Kein Messenger</b><span>Mails, Teams und Einladungen gehen über die Programme, die schon auf dem Mac sind.</span></p></div>
+        <div><span class="x">×</span><p><b>Keine Software von der Stange</b><span>Gebaut von einem Lehrer für den eigenen Schulalltag, abgestimmt auf das Intranet der eigenen Schule.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt hell">
+    <div class="huelle zwei">
+      <div>
+        <div class="kicker">Stand</div>
+        <h2>Im täglichen Einsatz</h2>
+        <p style="margin-top:16px;color:var(--text-2)">Seit Mai 2026 im Schulalltag, aktuell Version 1.5. Läuft auf macOS 26.4 und neuer, verteilt als notarisierte App. iPad und iPhone sind geplant.</p>
+      </div>
+      <div>
+        <div class="kicker">Mehr erfahren</div>
+        <h2>Unter der Haube</h2>
+        <p style="margin-top:16px;color:var(--text-2)">Wie die App aufgebaut ist und wie sie mit dem Intranet spricht, steht unter <a href="architektur.html">Architektur</a>. Wohin Daten fliessen, unter <a href="datenschutz.html">Datenschutz</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <span>MySchool · Mac-App für den Schulalltag</span>
+    <span>Alle Bilder: Demo-Version mit erfundenen Daten · <a href="MySchool-Vorstellung.pdf">Als PDF</a></span>
+  </div>
+</footer>
+</body>
+</html>

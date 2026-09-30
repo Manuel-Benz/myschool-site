@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de-CH" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MySchool Architektur</title>
+<meta name="description" content="Wie MySchool aufgebaut ist: lokale Datenbank, Sync mit dem Intranet, Schreib-Warteschlange und Helfer in der Menüleiste.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .d-box { fill: var(--karte); stroke: var(--linie); }
+  .d-app { fill: var(--akzent-weich); stroke: var(--akzent); }
+  .d-ext { fill: var(--grund); stroke: var(--text-3); }
+  .d-t { fill: var(--text); font: 600 14px -apple-system, BlinkMacSystemFont, sans-serif; }
+  .d-s { fill: var(--text-2); font: 12px -apple-system, BlinkMacSystemFont, sans-serif; }
+  .d-l { stroke: var(--text-3); stroke-width: 1.5; fill: none; marker-end: url(#pfeil); }
+  .d-la { stroke: var(--akzent); stroke-width: 2; fill: none; marker-end: url(#pfeilA); }
+  .d-lab { fill: var(--text-3); font: 600 11px -apple-system, BlinkMacSystemFont, sans-serif; }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="index.html"><img src="img/icon.png" alt="">MySchool</a>
+    <nav class="navi">
+      <a href="index.html">Vorstellung</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="architektur.html" aria-current="page">Architektur</a>
+      <a href="MySchool-Vorstellung.pdf">PDF</a>
+    </nav>
+  </div>
+</header>
+
+<main class="textseite">
+  <div class="huelle">
+    <span class="pille himmel">Architektur</span>
+    <h1 style="margin-top:14px">Unter der Haube</h1>
+    <p>Ein Überblick für alle, die wissen wollen, wie MySchool gebaut ist. Die App ist in Swift und SwiftUI geschrieben und läuft auf macOS; iPad und iPhone sind geplant.</p>
+
+    <h2>Grundsätze</h2>
+    <ul>
+      <li><strong>Die eigene Datenbank ist das Rückgrat.</strong> Intranet und Kalender sind Datenquellen, nie Voraussetzung.</li>
+      <li><strong>Offline-first.</strong> Lesen geht immer. Schreiben ins Intranet läuft über eine Warteschlange, die nachholt.</li>
+      <li><strong>Manuelle Eingabe vor Sync.</strong> Jeder Bereich funktioniert auch ohne Intranet.</li>
+      <li><strong>Einfach halten.</strong> Module sind Ordner im Projekt, keine eigenen Pakete. Keine Abstraktion auf Vorrat.</li>
+    </ul>
+
+    <h2>Bausteine</h2>
+    <div class="diagramm">
+      <svg viewBox="0 0 860 400" role="img" aria-label="Bausteine: Die App liest und schreibt die Datenbank und holt Daten aus dem Intranet. Schreibaufträge gehen in eine Warteschlange, die App oder Helfer abarbeiten; das Intranet quittiert. Der Helfer führt Mitteilungen aus und nimmt Schnellerfassungen entgegen.">
+        <defs>
+          <marker id="pfeil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--text-3)"/></marker>
+          <marker id="pfeilA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--akzent)"/></marker>
+        </defs>
+
+        <rect class="d-app" x="20" y="30" width="220" height="80" rx="14"/>
+        <text class="d-t" x="40" y="62">MySchool</text>
+        <text class="d-s" x="40" y="84">Ansichten, Sync, Planung</text>
+
+        <rect class="d-box" x="20" y="170" width="220" height="80" rx="14"/>
+        <text class="d-t" x="40" y="202">Datenbank</text>
+        <text class="d-s" x="40" y="224">SwiftData, lokal</text>
+        <path class="d-la" d="M130 110 V168"/>
+        <path class="d-la" d="M110 170 V112"/>
+
+        <rect class="d-box" x="320" y="170" width="220" height="80" rx="14"/>
+        <text class="d-t" x="340" y="202">Schreib-Warteschlange</text>
+        <text class="d-s" x="340" y="224">Aufträge und Quittungen</text>
+        <path class="d-l" d="M240 90 C290 90 330 120 380 168"/>
+        <text class="d-lab" x="250" y="150">einreihen</text>
+
+        <rect class="d-box" x="320" y="310" width="220" height="70" rx="14"/>
+        <text class="d-t" x="340" y="340">Helfer (Menüleiste)</text>
+        <text class="d-s" x="340" y="360">Mitteilungen, Schnellerfassung</text>
+        <path class="d-l" d="M430 308 V252"/>
+        <text class="d-lab" x="438" y="286">arbeitet ab</text>
+
+        <rect class="d-ext" x="620" y="30" width="220" height="80" rx="14"/>
+        <text class="d-t" x="640" y="62">Intranet</text>
+        <text class="d-s" x="640" y="84">JSON über HTTPS</text>
+        <path class="d-l" d="M620 70 H242"/>
+        <text class="d-lab" x="400" y="62">Sync: lesen</text>
+        <path class="d-l" d="M540 200 C590 200 640 160 690 112"/>
+        <text class="d-lab" x="560" y="150">senden</text>
+        <path class="d-l" d="M730 112 C730 180 640 230 542 230"/>
+        <text class="d-lab" x="664" y="226">Quittung</text>
+
+        <rect class="d-ext" x="620" y="310" width="220" height="70" rx="14"/>
+        <text class="d-t" x="640" y="340">macOS</text>
+        <text class="d-s" x="640" y="360">Kalender, Mitteilungen, KI</text>
+        <path class="d-l" d="M540 345 H618"/>
+      </svg>
+    </div>
+
+    <h2>Zwei Programme, ein Datenbestand</h2>
+    <div class="tabelle">
+      <table>
+        <thead><tr><th>Teil</th><th>Aufgabe</th></tr></thead>
+        <tbody>
+          <tr><td><strong>MySchool</strong></td><td>Die App mit allen Bereichen. Sie allein schreibt die Datenbank und holt die Daten aus dem Intranet.</td></tr>
+          <tr><td><strong>Helfer</strong></td><td>Läuft unsichtbar in der Menüleiste, auch wenn MySchool geschlossen ist: zeigt Mitteilungen zur richtigen Zeit, nimmt Schnellerfassungen mit <kbd>⇧</kbd><kbd>⌘</kbd><kbd>K</kbd> an und schickt wartende Aufträge ans Intranet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Lesen: Intranet → Mac</h2>
+    <p>Die App spricht die Schnittstelle des Intranets direkt an, ohne Webseiten auszulesen. Sie meldet sich an, holt die Daten als JSON und meldet sich bei Ablauf der Sitzung neu an. Der Sync läuft in drei Stufen:</p>
+    <div class="tabelle" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Stufe</th><th>Takt</th><th>Inhalt</th></tr></thead>
+        <tbody>
+          <tr><td>Lektionen</td><td>stündlich</td><td>Stundenplan rund um heute</td></tr>
+          <tr><td>Tag</td><td>täglich</td><td>dazu Hausaufgaben, Schulkalender, fehlende Fotos</td></tr>
+          <tr><td>Voll</td><td>wöchentlich oder auf Knopfdruck</td><td>dazu Klassen, Schüler:innen, Eltern, Lehrpersonen</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px">Eigene Notizen hängen nie an etwas, das der Sync überschreibt. Wechselt eine Klasse im neuen Schuljahr den Namen („3b" wird „4b"), wandert alles mit.</p>
+
+    <h2>Schreiben: Mac → Intranet</h2>
+    <p>Lektion bestätigen, Absenzen, Hausaufgaben: Jeder solche Auftrag kommt zuerst in eine Warteschlange auf dem Mac. App oder Helfer schicken ihn ab, sobald Netz da ist. Ein Auftrag gilt erst als erledigt, wenn das Intranet ihn quittiert hat. Bis dahin zeigt die App den Zustand neben dem Häkchen an.</p>
+    <ul>
+      <li>Wiederholt wird nur, was den Server sicher nicht erreicht hat, damit nichts doppelt eingetragen wird.</li>
+      <li>Das erste Schreiben fragt nach, jede Schreibaktion landet in einem Protokoll.</li>
+      <li>Noten und Zimmer-Reservationen gehen direkt, nur mit Netz.</li>
+    </ul>
+
+    <h2>Mitteilungen</h2>
+    <p>Die App plant, der Helfer führt aus: MySchool legt einen Plan mit allen fälligen Mitteilungen ab (Geburtstage, Notiz-Erinnerungen, Termine), der Helfer macht daraus lokale Mitteilungen von macOS. So kommen sie auch, wenn die App geschlossen ist.</p>
+
+    <h2>Werkzeuge</h2>
+    <ul>
+      <li><strong>Swift, SwiftUI</strong> für App und Helfer</li>
+      <li><strong>SwiftData</strong> als lokale Datenbank, optional gespiegelt in die private iCloud</li>
+      <li><strong>EventKit</strong> für Kalender und Erinnerungen, <strong>UserNotifications</strong> für Mitteilungen</li>
+      <li><strong>Foundation Models</strong> (Apple Intelligence) für KI auf dem Gerät</li>
+      <li><strong>Swift Testing</strong> mit rund 800 automatischen Tests</li>
+      <li>Verteilung als signierte und notarisierte App</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <span>MySchool · Mac-App für den Schulalltag</span>
+    <span><a href="index.html">Zur Vorstellung</a></span>
+  </div>
+</footer>
+</body>
+</html>
