@@ -1,7 +1,8 @@
-/* MySchool — Website. Farben aus der App-Palette „Fantastic Mr. Fox". */
+/* MySchool — Website. Farben aus dem My-Designsystem (~/MySuite), Schema „Fantastic Mr. Fox",
+   Akzent Rost-Karmin. --akzent-weich nach my-tokens.css (14 % auf Weiss, 22 % auf #1F1F22). */
 :root {
-  --akzent: #D95B0F;
-  --akzent-weich: #FBE9DD;
+  --akzent: #900B2E;
+  --akzent-weich: #F0DDE2;
   --moos: #556E1E;
   --moos-weich: #EAF0DC;
   --himmel: #1B93BE;
@@ -23,8 +24,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --akzent: #EC7024; --akzent-weich: #3A2517;
-    --moos: #74952C; --moos-weich: #26301A;
+    --akzent: #EC5E86; --akzent-weich: #4C2D38;
+    --moos: #73942B; --moos-weich: #26301A;
     --himmel: #25ACDD; --himmel-weich: #16303A;
     --rost: #DB605A; --rost-weich: #3A1F1D;
     --text: #F2F2F4; --text-2: #B4B4BA; --text-3: #85858C;
@@ -58,11 +59,11 @@ p { margin: 0; }
 .kopf .huelle { display: flex; align-items: center; gap: 24px; height: 60px; }
 .marke { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 650; font-size: 1.05rem; }
 .marke:hover { text-decoration: none; }
-.marke img { width: 30px; height: 30px; border-radius: 7px; }
+.marke img { width: 24px; height: 24px; border-radius: 6px; }
 .navi { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
 .navi a { color: #D8D8DC; padding: 6px 12px; border-radius: 8px; font-size: .95rem; }
 .navi a:hover { background: rgba(255,255,255,.08); text-decoration: none; }
-.navi a[aria-current="page"] { background: rgba(217,91,15,.28); color: #FFB98C; }
+.navi a[aria-current="page"] { background: rgba(236,94,134,.28); color: #FFFFFF; }
 
 /* Pillen wie in der App */
 .pille { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .8rem; font-weight: 600;
@@ -165,7 +166,7 @@ tr:last-child td { border-bottom: 0; }
 /* Fuss */
 .fuss { background: var(--leiste); color: #A9A9AF; padding: 32px 0; font-size: .9rem; }
 .fuss .huelle { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.fuss a { color: #FFB98C; }
+.fuss a { color: #EC5E86; }
 
 @media screen and (max-width: 860px) {
   .zwei, .drei, .vergleich, .nicht, .funktion, .funktion.umgekehrt { grid-template-columns: minmax(0,1fr); }
