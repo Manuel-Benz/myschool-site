@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="de-CH" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MySchool Anleitung</title>
+<meta name="description" content="Anleitung zu MySchool: einrichten, Lektionen bestätigen, Absenzen erfassen, Termine finden, Unterricht planen, Noten, Notizen, Listen und die wichtigsten Tastenkürzel.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="index.html"><img src="img/icon.png" alt="">MySchool</a>
+    <nav class="navi">
+      <a href="index.html">Vorstellung</a>
+      <a href="anleitung.html" aria-current="page">Anleitung</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="architektur.html">Architektur</a>
+      <a href="MySchool-Vorstellung.pdf">PDF</a>
+    </nav>
+  </div>
+</header>
+
+<main class="anleitung">
+  <div class="huelle anleitung-raster">
+
+    <nav class="inhalt" aria-label="Inhalt">
+      <details open>
+        <summary>Inhalt</summary>
+        <ol>
+          <li><a href="#start">Erste Schritte</a></li>
+          <li><a href="#bedienung">Bedienung</a></li>
+          <li><a href="#heute">Heute</a></li>
+          <li><a href="#kalender">Kalender &amp; Termine</a></li>
+          <li><a href="#termin-finden">Termin finden</a></li>
+          <li><a href="#zimmer-geraete">Zimmer &amp; Geräte</a></li>
+          <li><a href="#lektionen">Lektionen &amp; Absenzen</a></li>
+          <li><a href="#unterricht">Unterricht planen</a></li>
+          <li><a href="#klassen">Klassen &amp; Schüler:innen</a></li>
+          <li><a href="#noten">Noten</a></li>
+          <li><a href="#pruefungen">Prüfungen</a></li>
+          <li><a href="#notizen">Notizen</a></li>
+          <li><a href="#listen">Listen</a></li>
+          <li><a href="#schnell">Schnellerfassung</a></li>
+          <li><a href="#schutz">Beamer &amp; Sperre</a></li>
+          <li><a href="#schuljahr">Schuljahreswechsel</a></li>
+          <li><a href="#probleme">Wenn etwas hakt</a></li>
+        </ol>
+      </details>
+    </nav>
+
+    <div class="text">
+      <span class="pille moos">Anleitung</span>
+      <h1 style="margin-top:14px">So geht’s</h1>
+      <p class="einleitung">Von der Einrichtung bis zum Schuljahreswechsel: die häufigsten Handgriffe in MySchool, Schritt für Schritt. Wer nur etwas Bestimmtes sucht, springt über das Inhaltsverzeichnis direkt hin. Alle Bilder stammen aus der Demo-Version mit erfundenen Daten.</p>
+
+      <!-- Erste Schritte -->
+      <section id="start">
+        <h2>Erste Schritte</h2>
+        <h3>Installieren</h3>
+        <ol class="schritte">
+          <li>Das DMG öffnen und <b>MySchool</b> in den Ordner <b>Programme</b> ziehen.</li>
+          <li>MySchool aus dem Ordner Programme starten. Die App ist von Apple notarisiert, macOS fragt beim ersten Start nur einmal nach.</li>
+        </ol>
+        <p>MySchool braucht macOS 26.4 oder neuer.</p>
+
+        <h3>Einrichtung</h3>
+        <p>Beim ersten Start führt ein Assistent in sieben Schritten durch alles Nötige. Jeder Schritt lässt sich überspringen und später nachholen.</p>
+        <ol class="schritte">
+          <li><b>Anzeige:</b> Farbpalette, hell oder dunkel, Schriftgrösse.</li>
+          <li><b>Intranet:</b> Benutzername und Passwort des Intranets eingeben, dann <b>Anmelden &amp; prüfen</b>. Danach holt MySchool Klassen, Schüler:innen, Stundenplan und Schulkalender. Ohne Anmeldung bleibt die App weitgehend leer.</li>
+          <li><b>Berechtigungen:</b> Zugriff auf Kalender und Erinnerungen erlauben, damit die eigenen Termine und Aufgaben in MySchool erscheinen.</li>
+          <li><b>Kalender:</b> wählen, welche Kalender und Erinnerungslisten MySchool zeigt und wohin neue Termine und Aufgaben gehen.</li>
+          <li><b>Mitteilungen:</b> <b>Mitteilungen aktivieren</b> und das <b>Empfohlene Set</b> übernehmen (Geburtstage, Prüfungen, gestrichene Lektionen, Sitzungen).</li>
+          <li><b>iCloud:</b> nur einschalten, wer MySchool auf mehreren eigenen Geräten nutzt. Standard ist aus.</li>
+          <li><b>Fertig.</b> Der erste Abgleich mit dem Intranet läuft im Hintergrund und dauert ein, zwei Minuten.</li>
+        </ol>
+        <p class="tipp"><b>Später ändern:</b> Die Einrichtung lässt sich jederzeit unter <b>Einstellungen › Allgemein › Einrichtung erneut öffnen</b> wiederholen. Die Zugangsdaten liegen im Schlüsselbund von macOS.</p>
+      </section>
+
+      <!-- Bedienung -->
+      <section id="bedienung">
+        <h2>Bedienung</h2>
+        <p>Links steht die Seitenleiste mit den Bereichen, rechts der Inhalt. Viele Bereiche haben oben Reiter, etwa der Kalender mit <i>Woche</i>, <i>Liste</i>, <i>Zimmer</i> und <i>Geräte</i>. Bereiche, die man nicht braucht, blendet man unter <b>Einstellungen › Allgemein › Bereiche</b> aus.</p>
+        <div class="tabelle">
+          <table class="kuerzel">
+            <tr><th>Kürzel</th><th>Was es tut</th></tr>
+            <tr><td><span class="kombi"><kbd>⌘</kbd> <kbd>1</kbd> … <kbd>⌘</kbd> <kbd>0</kbd></span></td><td>Bereich wechseln: Heute, Kalender, Lektionen &amp; Absenzen, Klassen, Schüler:innen, Lehrpersonen, Noten, Prüfungen, Hausaufgaben, Notizen</td></tr>
+            <tr><td><span class="kombi"><kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>U</kbd> / <kbd>L</kbd> / <kbd>A</kbd></span></td><td>Unterricht, Listen, Archiv</td></tr>
+            <tr><td><span class="kombi"><kbd>⌘</kbd> <kbd>K</kbd></span></td><td>Befehlspalette: zu jeder Person, Klasse oder Lektion springen und Kurzbefehle eintippen</td></tr>
+            <tr><td><span class="kombi"><kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd></span></td><td>Schnellerfassung von überall auf dem Mac, auch bei geschlossener App</td></tr>
+            <tr><td><span class="kombi"><kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd></span></td><td>Suche über alles</td></tr>
+            <tr><td><span class="kombi"><kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd></span></td><td>Schnellnotiz</td></tr>
+            <tr><td><span class="kombi"><kbd>⌃</kbd> <kbd>Tab</kbd></span> · <span class="kombi"><kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>1</kbd> … <kbd>5</kbd></span></td><td>Nächster Reiter · Reiter direkt wählen</td></tr>
+            <tr><td><span class="kombi"><kbd>⌘</kbd> <kbd>←</kbd> <kbd>→</kbd></span> · <span class="kombi"><kbd>⌘</kbd> <kbd>T</kbd></span></td><td>Im Kalender und im Prüfungsplan vor- und zurückblättern · zurück zu heute</td></tr>
+            <tr><td><span class="kombi"><kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd></span></td><td>Präsentationsmodus ein und aus</td></tr>
+          </table>
+        </div>
+        <p class="tipp">Alle Kürzel lassen sich unter <b>Einstellungen › Kurzbefehle</b> ändern.</p>
+      </section>
+
+      <!-- Heute -->
+      <section id="heute">
+        <h2>Heute</h2>
+        <p>Der Startbereich zeigt, was heute ansteht: die Lektionen mit Absenzen, Prüfungen, fällige Notiz-Erinnerungen, Geburtstage, Rückläufe, die noch fehlen, und neue Einträge im Schulkalender.</p>
+        <figure class="fenster"><img src="img/heute.webp" width="2000" height="1207" loading="lazy" alt="Die Heute-Ansicht mit Lektionen, Absenzenmuster, Notiz-Erinnerung, Geburtstagen und Schulkalender-Einträgen"></figure>
+        <h3>Lektion bestätigen</h3>
+        <ol class="schritte">
+          <li>Neben der Lektion auf <b>Bestätigen</b> klicken.</li>
+          <li>Beim allerersten Mal fragt MySchool, ob es ins Intranet schreiben darf (<b>Erlauben &amp; bestätigen</b>). Danach geht es mit einem Klick.</li>
+        </ol>
+        <h3>Schulkalender-Einträge übernehmen</h3>
+        <p>Neue Einträge im Schulkalender, die eigene Klassen betreffen, erscheinen in Heute zum Bestätigen. Was man bestätigt, steht danach im Kalender und löst Mitteilungen aus.</p>
+        <p class="tipp"><b>Hinweise ernst nehmen:</b> Absenzenmuster („fehlt oft am Montagmorgen“) und der Prüfungs-Check (wer vor einer heutigen Prüfung gefehlt hat) erscheinen nur, wenn es etwas zu melden gibt. Ein Klick öffnet das Profil der Person.</p>
+      </section>
+
+      <!-- Kalender -->
+      <section id="kalender">
+        <h2>Kalender &amp; Termine</h2>
+        <p>Die Woche zeigt Lektionen, Schulkalender und die verknüpften Kalender (iCloud, Exchange, Google) in einem Raster. Mit den Pillen oben blendet man Quellen ein und aus.</p>
+        <figure class="fenster"><img src="img/kalender.webp" width="2000" height="1207" loading="lazy" alt="Wochenkalender mit Lektionen, Prüfungen, einem Ausfall und einem Sporttag"></figure>
+        <h3>Termin anlegen</h3>
+        <ol class="schritte">
+          <li>In der Woche an eine freie Stelle doppelklicken oder mit der Maus einen Zeitraum aufziehen.</li>
+          <li>Titel, Ort und Zeit eintragen.</li>
+          <li>Unter <b>Teilnehmer:innen einladen</b> Personen aus den Klassenlisten oder den Kontakten hinzufügen und <b>Einladung senden</b>. Die Einladung geht über Apple Mail.</li>
+        </ol>
+        <h3>Verschieben, ändern, löschen</h3>
+        <ul>
+          <li><b>Verschieben:</b> den Termin mit der Maus an eine andere Stelle ziehen. Eingeladene erhalten die Änderung automatisch.</li>
+          <li><b>Ändern:</b> doppelklicken.</li>
+          <li><b>Löschen:</b> anklicken und die Rückschritttaste drücken, oder Rechtsklick › <b>Löschen</b>. Eingeladene erhalten eine Absage.</li>
+        </ul>
+        <p class="tipp"><b>Weitere Kalender abonnieren:</b> Unter <b>Einstellungen › Kalender</b> lassen sich weitere Kalender hinzufügen. Im Modus „Bestätigen“ landen neue Einträge zuerst in Heute, wie beim Schulkalender.</p>
+      </section>
+
+      <!-- Termin finden -->
+      <section id="termin-finden">
+        <h2>Termin finden</h2>
+        <p>Sucht freie Zeit über den eigenen Stundenplan, die Stundenpläne von Kolleg:innen und die eigenen Kalender.</p>
+        <figure class="fenster"><img src="img/termin_finden.webp" width="1800" height="1304" loading="lazy" alt="Termin finden: aus einem Satz erkannte Dauer, Zeitraum und Tageszeit, daneben Vorschläge"></figure>
+        <ol class="schritte">
+          <li>Im <b>Kalender</b> oben rechts auf <b>Termin finden</b> klicken.</li>
+          <li>Den Termin in einem Satz beschreiben, etwa „45 Min Anfang November, nicht am Mittwoch, eher nachmittags“. MySchool zeigt, was es erkannt hat.</li>
+          <li>Mit <b>Hinzufügen…</b> die Lehrpersonen (oder eine Klasse) wählen, die dabei sein sollen. Ihr Stundenplan muss im Vorschlag frei sein.</li>
+          <li>Einen Vorschlag wählen (der beste ist markiert, mit Begründung pro Person) und auf <b>Übernehmen</b> klicken. Der Termin wird angelegt und die Lehrpersonen eingeladen.</li>
+        </ol>
+        <p class="tipp">Passt keiner, gibt <b>Mehr Vorschläge</b> weitere. Mit <b>Möglichst nahe am Stundenplan</b> bevorzugt die Suche Zeiten direkt vor oder nach einer Lektion.</p>
+      </section>
+
+      <!-- Zimmer & Geräte -->
+      <section id="zimmer-geraete">
+        <h2>Zimmer &amp; Geräte</h2>
+        <h3>Freies Zimmer finden und reservieren</h3>
+        <ol class="schritte">
+          <li>Im <b>Kalender</b> den Reiter <b>Zimmer</b> öffnen und den Tag wählen.</li>
+          <li>In der Stundenleiste eine Lektion anklicken oder mehrere aufziehen. Jetzt stehen nur noch die freien Zimmer da, nach Stockwerk geordnet. Ausfallende Lektionen zählen als frei.</li>
+          <li>Bei reservierbaren Zimmern auf <b>Zimmer … reservieren</b> klicken.</li>
+        </ol>
+        <figure class="fenster"><img src="img/zimmer.webp" width="2000" height="1207" loading="lazy" alt="Freie Zimmer am Montag, nach Stockwerk gruppiert"></figure>
+        <h3>Beamer- oder Laptopwagen buchen</h3>
+        <ol class="schritte">
+          <li>Im <b>Kalender</b> den Reiter <b>Geräte</b> öffnen. Oben stehen die eigenen Lektionen, darunter alle buchbaren Geräte als Zeitstrahl.</li>
+          <li>Eine eigene Lektion auf die Zeile des Geräts ziehen. Fertig.</li>
+          <li>Eigene Buchungen sind hervorgehoben. Rechtsklick › <b>Reservation löschen…</b> gibt ein Gerät wieder frei.</li>
+        </ol>
+        <figure class="fenster"><img src="img/geraete.webp" width="2000" height="1207" loading="lazy" alt="Zeitstrahl der Geräte mit eigenen Lektionen und Buchungen von Kolleg:innen"></figure>
+      </section>
+
+      <!-- Lektionen & Absenzen -->
+      <section id="lektionen">
+        <h2>Lektionen &amp; Absenzen</h2>
+        <p>Das Klassenbuch ohne Umweg über das Intranet. Die Liste zeigt die eigenen Lektionen, mit Hausaufgaben, Absenzen und dem Bestätigen-Knopf.</p>
+        <figure class="fenster"><img src="img/lektionen.webp" width="2000" height="1207" loading="lazy" alt="Lektionenliste mit Hausaufgaben, Absenzen und Bestätigen-Knöpfen"></figure>
+        <h3>Absenzen erfassen</h3>
+        <ol class="schritte">
+          <li>Die Lektion öffnen (Doppelklick in der Liste oder im Kalender).</li>
+          <li>Bei der Schüler:in, die fehlt, den Status wählen. Alle anderen gelten als anwesend.</li>
+          <li><b>Lektion bestätigt</b> anhaken, sobald alles stimmt.</li>
+        </ol>
+        <h3>Hausaufgabe eintragen</h3>
+        <p>In der geöffneten Lektion unter Hausaufgaben den Text eintragen, auf Wunsch mit Datei. Mehrere auf einmal geht im Bereich <b>Hausaufgaben</b> unter <b>Erfassen</b>.</p>
+        <h3>Als Klassenlehrperson</h3>
+        <p>Der Reiter <b>Meine Klasse</b> zeigt alle Absenzen des Semesters, eine Zeile pro Person. Die Legende ist zugleich Filter: ein Klick auf „offen“ hebt genau diese Einträge hervor.</p>
+        <figure class="fenster"><img src="img/klassenraster.webp" width="2000" height="1207" loading="lazy" alt="Absenzen-Raster einer Klasse über das Semester"></figure>
+        <p class="tipp"><b>Ohne Netz?</b> Kein Problem. Bestätigungen, Absenzen und Hausaufgaben warten in einer Warteschlange und gehen raus, sobald die Verbindung steht. Ein kleines Symbol neben dem Eintrag zeigt, ob er schon angekommen ist.</p>
+      </section>
+
+      <!-- Unterricht -->
+      <section id="unterricht">
+        <h2>Unterricht planen</h2>
+        <p>Pro Kurs eine Zeile pro Lektion mit Material, Feinplan und Bemerkung. Ausfälle, Ferien und Prüfungen sind schon eingetragen. Mit <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>U</kbd> ist man dort.</p>
+        <figure class="fenster"><img src="img/unterricht.webp" width="2000" height="1207" loading="lazy" alt="Kursplan einer Mathematikklasse mit Material, Feinplan, Hausaufgaben, einem Ausfall und einer Prüfung"></figure>
+        <h3>Planen</h3>
+        <ol class="schritte">
+          <li>Oben den Kurs wählen.</li>
+          <li>In die Zellen schreiben: Material (auch Links und Dateien), Feinplan (mit Checklisten), Bemerkung.</li>
+          <li>Eine Zeile verschieben: mit der Maus ziehen, der Rest rückt nach. Mit <kbd>⌥</kbd> gedrückt tauschen zwei Zeilen den Platz.</li>
+          <li>Fällt eine geplante Lektion aus, steht dort „fällt aus“. Ein Klick auf <b>Plan nachrücken</b> schiebt ihren Plan und alles danach um eine Lektion weiter.</li>
+        </ol>
+        <h3>Hausaufgabe und Prüfung direkt aus dem Plan</h3>
+        <ul>
+          <li>Schreibt man in die Bemerkung eine Zeile <code>HA: Serie 6, Nr. 1–4</code>, erscheint der Knopf <b>Hausaufgabe ins Klassenbuch</b>. Steht dort schon eine andere, fragt MySchool nach.</li>
+          <li>Rechtsklick › <b>Als Prüfung markieren</b> markiert die Lektion auch im Intranet. Eine Zeile <code>Prüfung: Vektoren</code> hält den Stoff fest.</li>
+        </ul>
+        <h3>Themen wiederverwenden</h3>
+        <ol class="schritte">
+          <li>Mehrere Lektionen mit <kbd>⇧</kbd>- oder <kbd>⌘</kbd>-Klick wählen.</li>
+          <li>Rechtsklick › <b>Ins Thema übernehmen …</b> und einen Namen geben, auf Wunsch mit Feinplan.</li>
+          <li>Im Kursplan eines anderen Kurses steht rechts die Themen-Bibliothek. Das Thema auf die Lektion ziehen, ab der es beginnen soll. Ein Band am Rand zeigt danach den Fortschritt, etwa „3/8“. Bearbeiten lassen sich Themen im Reiter <b>Themen</b>.</li>
+        </ol>
+      </section>
+
+      <!-- Klassen -->
+      <section id="klassen">
+        <h2>Klassen &amp; Schüler:innen</h2>
+        <p>Unter <b>Klassen &amp; Kurse</b> steht alles zu einer Klasse: Klassenliste mit Fotos, Ämtli, Hinweisen und Geburtstagen, dazu Stundenplan, Lehrpersonen und Kurse als Reiter.</p>
+        <figure class="fenster"><img src="img/klasse.webp" width="2000" height="1207" loading="lazy" alt="Klassenübersicht mit Notizen und Schülertabelle"></figure>
+        <h3>Mail an die Klasse oder die Eltern</h3>
+        <p>Über das Menü der Klasse: <b>Mail an Schüler:innen</b>, <b>Mail an alle Eltern</b> oder <b>Mail an Lehrpersonen</b>. MySchool öffnet einen Entwurf im Mailprogramm, verschickt wird erst dort. Ehemalige sind ausgenommen. Daneben öffnet <b>Klassen-Kanal öffnen</b> den Teams-Kanal.</p>
+        <h3>Klassenspiegel, Export</h3>
+        <p><b>Klassenspiegel (PDF)</b> erstellt eine Fotoliste zum Ausdrucken, <b>Excel/CSV-Export</b> die Klassenliste als Tabelle.</p>
+        <h3>Sitzordnung</h3>
+        <ol class="schritte">
+          <li>In der Klasse <b>Sitzordnung</b> öffnen.</li>
+          <li>Pulte anordnen oder <b>Standardanordnung</b> nehmen.</li>
+          <li><b>Verteilen</b> wählen: <i>Zufällig</i>, <i>Abwechselnd</i> oder <i>In Zweierblöcken</i>. Danach einzelne Personen von Hand umsetzen.</li>
+          <li>Mit dem Drucker-Symbol drucken oder als PDF sichern.</li>
+        </ol>
+        <figure class="fenster"><img src="img/sitzordnung.webp" width="2000" height="1207" loading="lazy" alt="Sitzordnung einer Klasse mit Lehrerpult"></figure>
+        <p class="tipp"><b>Zufallsgenerator:</b> Das Glücksrad wählt jemanden aus der Klasse aus, im <b>Gruppenmodus</b> bildet es Gruppen. Wer schon dran war, merkt sich der <b>Verlauf</b>.</p>
+        <h3>Profil einer Person</h3>
+        <p>Ein Klick auf einen Namen öffnet das Profil: Kontakt, Eltern, Absenzen, Noten, Notizen und Hinweise. Bei vielen Notizen fasst Apple Intelligence sie in ein paar Sätzen zusammen, direkt auf dem Mac.</p>
+      </section>
+
+      <!-- Noten -->
+      <section id="noten">
+        <h2>Noten</h2>
+        <p>Das Notenbuch des Intranets, live. Der Bereich öffnet erst nach Touch ID.</p>
+        <figure class="fenster"><img src="img/noten.webp" width="2000" height="1207" loading="lazy" alt="Notenbuch einer Klasse mit vier Prüfungen, Schnitt und fehlenden Noten"></figure>
+        <h3>Noten eintragen</h3>
+        <ol class="schritte">
+          <li>Kurs wählen, mit <b>Spalte</b> eine neue Prüfung anlegen: Titel, Datum, Gewicht.</li>
+          <li>Die Noten direkt in die Zellen tippen. Gespeichert wird mit <kbd>↩</kbd> oder mit einem Klick in die nächste Zelle.</li>
+          <li>Den Schnitt rechnet das Intranet. Fehlende Noten sind markiert.</li>
+        </ol>
+        <h3>Prüfung mit Punkten auswerten</h3>
+        <ol class="schritte">
+          <li>In der Spalte <b>Punkte erfassen …</b> wählen.</li>
+          <li>Pro Aufgabe die Maximalpunkte festlegen, dann die Punkte pro Person eintragen.</li>
+          <li>Notenskala wählen, prüfen und <b>Noten ins Intranet übernehmen</b>.</li>
+        </ol>
+        <p class="tipp"><b>Analysieren</b> zeigt Schnitt, Spannweite und ungenügende Noten einer Prüfung.</p>
+      </section>
+
+      <!-- Prüfungen -->
+      <section id="pruefungen">
+        <h2>Prüfungen</h2>
+        <p>Pro Klasse ein Monat auf einen Blick: die eigenen Prüfungen, die der anderen Fächer und die eigenen Lektionen als freie Plätze.</p>
+        <figure class="fenster"><img src="img/pruefungen.webp" width="2000" height="1207" loading="lazy" alt="Prüfungsplan im November mit eigenen Prüfungen, Prüfungen anderer Fächer und freien Lektionen"></figure>
+        <ol class="schritte">
+          <li>Klasse wählen, mit <kbd>⌘</kbd> <kbd>←</kbd> <kbd>→</kbd> den Monat wechseln.</li>
+          <li>Auf einen freien Platz klicken: die Lektion ist als Prüfung markiert, auch im Intranet.</li>
+          <li>Nochmals klicken macht es rückgängig.</li>
+        </ol>
+        <p class="tipp">Der Reiter <b>Nachprüfungen</b> meldet Schüler:innen zur Nachprüfung an: <b>Neue Anmeldung</b>, ausfüllen, <b>Vorschau &amp; Anmeldung senden</b>.</p>
+      </section>
+
+      <!-- Notizen -->
+      <section id="notizen">
+        <h2>Notizen</h2>
+        <p>Beobachtungen zu Schüler:innen, Klassen, Kursen oder einzelnen Lektionen, die man wiederfindet.</p>
+        <figure class="fenster"><img src="img/notizen.webp" width="2000" height="1207" loading="lazy" alt="Notizenliste mit Tags und einer geöffneten Notiz mit Checkliste"></figure>
+        <h3>Notiz schreiben</h3>
+        <ol class="schritte">
+          <li><b>Neue Notiz</b> im Bereich Notizen, im Profil einer Person oder in der Klasse. Schneller: <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd>.</li>
+          <li>Text schreiben, Tags wie „Beobachtung“ oder „Elterngespräch“ setzen. Tags sind frei wählbar und farbig.</li>
+          <li>Auf Wunsch <b>Erinnern</b> einschalten: einmalig, wöchentlich, monatlich oder im Takt der Lektionen. Mit <b>Nur an Tagen mit dieser Schüler:in</b> kommt die Erinnerung nur, wenn man die Person unterrichtet.</li>
+        </ol>
+        <p class="tipp"><b>Häufungs-Meldung:</b> Bei einem Tag lässt sich eine Schwelle setzen, etwa dreimal „Nachfragen“. Wird sie bei einer Person erreicht, meldet sich Heute.</p>
+      </section>
+
+      <!-- Listen -->
+      <section id="listen">
+        <h2>Listen</h2>
+        <p>Für Rückläufe, Bezahlungen und alles, was man pro Person abhaken will.</p>
+        <figure class="fenster"><img src="img/listen.webp" width="2000" height="1207" loading="lazy" alt="Liste für eine Exkursion mit Beitrag und Einverständnis"></figure>
+        <ol class="schritte">
+          <li><b>Neue Liste</b> für eine Klasse anlegen, oder eine <b>Freie Liste</b> ohne Klasse.</li>
+          <li>Mit <b>Spalte</b> Spalten hinzufügen: Häkchen, Betrag, Auswahl oder Text.</li>
+          <li>Abhaken, wer abgegeben oder bezahlt hat. Wer noch fehlt, erscheint in Heute.</li>
+          <li><b>Mail an Offene</b> oder <b>Teams-Chat mit Offenen</b> erinnert genau die, die noch fehlen.</li>
+        </ol>
+        <p class="tipp">Eine Spalte mit Punkten oder Noten lässt sich mit <b>Ins Notenheft übernehmen</b> als Notenspalte ins Intranet schreiben.</p>
+      </section>
+
+      <!-- Schnellerfassung -->
+      <section id="schnell">
+        <h2>Schnellerfassung</h2>
+        <p>Statt sich durch Menüs zu klicken, tippt man einen kurzen Satz. Das geht in der App mit <kbd>⌘</kbd> <kbd>K</kbd> und von überall auf dem Mac mit <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd>, auch wenn MySchool geschlossen ist. Vor dem Speichern zeigt eine Vorschau, was erkannt wurde.</p>
+        <figure class="fenster"><img src="img/palette.webp" width="2000" height="1207" loading="lazy" alt="Befehlspalette mit einer erkannten Hausaufgabe"></figure>
+        <div class="tabelle">
+          <table class="beispiele">
+            <tr><th>Eingabe</th><th>Ergebnis</th></tr>
+            <tr><td><code>HA 3b bis Fr: Serie 6</code></td><td>Hausaufgabe im Klassenbuch der 3b auf die Lektion am Freitag. Ohne Tag nimmt MySchool die nächste Lektion.</td></tr>
+            <tr><td><code>Prüfung 4a Freitag</code></td><td>Markiert die Lektion der 4a am Freitag als Prüfung.</td></tr>
+            <tr><td><code>Bestätigen 4d</code></td><td>Bestätigt die passende Lektion der 4d.</td></tr>
+            <tr><td><code>Notiz 1i: heute sehr unruhig</code></td><td>Notiz zur Klasse 1i. Mit einem Namen statt der Klasse geht sie an die Person.</td></tr>
+            <tr><td><code>Aufgabe Anna Müller: Zeugnis kopieren bis Freitag</code></td><td>Aufgabe mit Frist, verknüpft mit der Person.</td></tr>
+            <tr><td><code>Sitzung Fachschaft Di 12.15–13.00 Zimmer 203</code></td><td>Termin mit Zeit und Ort im Standardkalender.</td></tr>
+          </table>
+        </div>
+        <p class="tipp">In der App springt <kbd>⌘</kbd> <kbd>K</kbd> ausserdem zu jeder Person, Klasse oder Lektion: einfach den Namen tippen und <kbd>↩</kbd> drücken.</p>
+      </section>
+
+      <!-- Beamer & Sperre -->
+      <section id="schutz">
+        <h2>Beamer &amp; Sperre</h2>
+        <h3>Präsentationsmodus</h3>
+        <p>Liegt ein MySchool-Fenster auf dem Beamer, verschwinden darin Noten, Notizen, Absenzen, Fotos und Kontaktdaten. Auf dem eigenen Bildschirm bleibt alles sichtbar. Beim Teilen des Bildschirms in Teams schaltet sich der Modus selbst ein.</p>
+        <div class="vergleich">
+          <figure><div class="fenster"><img src="img/profil_detail.webp" width="1480" height="1150" loading="lazy" alt="Profil auf dem eigenen Bildschirm"></div><figcaption><span class="pille moos">Eigener Bildschirm</span> alles sichtbar</figcaption></figure>
+          <figure><div class="fenster"><img src="img/praesentation_profil_detail.webp" width="1480" height="1150" loading="lazy" alt="Dasselbe Profil im Präsentationsmodus"></div><figcaption><span class="pille rost">Beamer</span> Vertrauliches verborgen</figcaption></figure>
+        </div>
+        <p class="tipp">Für Zoom oder andere Programme schaltet <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd> den Modus von Hand ein. Unter <b>Einstellungen › Anzeige › Präsentationsmodus</b> lässt sich ausserdem festlegen, dass MySchool in keiner Bildschirmaufnahme erscheint.</p>
+        <h3>Touch-ID-Sperre</h3>
+        <p>Noten, Notizen, Archiv und Schüler:innen öffnen erst nach Touch ID. Verlässt man den Reiter, tut zwei Minuten nichts oder sperrt den Bildschirm, gehen sie wieder zu. Ungespeicherte Eingaben bleiben dabei erhalten. Einstellen lässt sich das unter <b>Einstellungen › Anzeige › Sperre</b>.</p>
+        <figure class="fenster"><img src="img/sperre.webp" width="1600" height="965" loading="lazy" alt="Der Reiter Noten ist gesperrt und zeigt nur den Knopf Entsperren"></figure>
+      </section>
+
+      <!-- Schuljahr -->
+      <section id="schuljahr">
+        <h2>Schuljahreswechsel</h2>
+        <p>Im Sommer stellt das Intranet auf das neue Schuljahr um, und aus der „3b“ wird die „4b“. MySchool erkennt das beim nächsten Abgleich.</p>
+        <ul>
+          <li><b>Klasse weiterführen:</b> Rechtsklick auf die alte Klasse › <b>Weiterführen als…</b> und die neue wählen. Notizen und alles andere, was an der Klasse hängt, wandern mit.</li>
+          <li><b>Klasse abgeben:</b> Rechtsklick › <b>Archivieren…</b>. MySchool sichert vorher Noten und Absenzen der Klasse aus dem Intranet. Im Bereich <b>Archiv</b> bleibt alles lesbar und lässt sich bei Bedarf <b>wiederherstellen</b>.</li>
+        </ul>
+      </section>
+
+      <!-- Probleme -->
+      <section id="probleme">
+        <h2>Wenn etwas hakt</h2>
+        <dl class="faq">
+          <dt>Die App ist leer.</dt>
+          <dd>Meist fehlt die Anmeldung beim Intranet. Unter <b>Einstellungen › Intranet</b> die Zugangsdaten prüfen und den Sync anstossen.</dd>
+          <dt>Eine Bestätigung oder Absenz kommt nicht im Intranet an.</dt>
+          <dd>Unter <b>Einstellungen › Intranet</b> zeigt die <b>Schreib-Warteschlange</b>, was noch wartet und warum. Ohne Netz holt MySchool alles von selbst nach, sobald die Verbindung steht.</dd>
+          <dt>Es kommen keine Mitteilungen.</dt>
+          <dd>Mitteilungen verschickt ein kleiner Helfer in der Menüleiste. Unter <b>Einstellungen › Mitteilungen</b> prüfen, ob er läuft und ob macOS ihm Mitteilungen erlaubt (Systemeinstellungen › Mitteilungen).</dd>
+          <dt>Meine Kalender fehlen.</dt>
+          <dd>Unter <b>Einstellungen › Kalender</b> prüfen, ob die Kalender angehakt sind. Erscheint gar keiner, fehlt die Berechtigung: Systemeinstellungen › Datenschutz &amp; Sicherheit › Kalender.</dd>
+          <dt>Die Schrift ist zu klein.</dt>
+          <dd><b>Einstellungen › Anzeige › Schrift</b> hat fünf Grössen, von „Sehr klein“ bis „Sehr gross“.</dd>
+        </dl>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <span>MySchool · Mac-App für den Schulalltag</span>
+    <span>Alle Bilder: Demo-Version mit erfundenen Daten · <a href="MySchool-Vorstellung.pdf">Als PDF</a></span>
+  </div>
+</footer>
+</body>
+</html>
