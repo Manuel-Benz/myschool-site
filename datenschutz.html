@@ -43,7 +43,7 @@
 
     <h2>Überblick</h2>
     <div class="diagramm">
-      <svg viewBox="0 0 860 470" role="img" aria-label="Datenfluss: Die App und ihre Datenbank liegen auf dem Mac. Verbindungen nach aussen gehen zum Intranet, optional zu iCloud, als Mail an eingeladene Personen und über macOS zu den Kalender-Konten.">
+      <svg viewBox="0 0 860 470" role="img" aria-label="Datenfluss: Die App und ihre Datenbank liegen auf dem Mac. Verbindungen nach aussen gehen zum Intranet, optional verschlüsselt zu iCloud, als Mail an eingeladene Personen und über macOS zu den Kalender-Konten.">
         <rect class="d-mac" x="10" y="10" width="440" height="450" rx="18"/>
         <text class="d-k" x="32" y="40">DEIN MAC</text>
 
@@ -73,8 +73,8 @@
         <text class="d-s" x="258" y="276">von macOS verwaltet</text>
 
         <rect class="d-box" x="32" y="312" width="190" height="64" rx="12"/>
-        <text class="d-t" x="48" y="340">Mail-Programm</text>
-        <text class="d-s" x="48" y="360">liest und sendet lokal</text>
+        <text class="d-t" x="48" y="340">Apple Mail</text>
+        <text class="d-s" x="48" y="360">verschickt Einladungen</text>
 
         <rect class="d-box" x="242" y="312" width="186" height="64" rx="12"/>
         <text class="d-t" x="258" y="340">Schreib-Protokoll</text>
@@ -90,8 +90,8 @@
         <path class="d-l" d="M450 92 H560"/>
 
         <rect class="d-opt" x="560" y="144" width="290" height="64" rx="12"/>
-        <text class="d-t" x="578" y="172">iCloud (privat)</text>
-        <text class="d-s" x="578" y="192">Backup und Geräte-Sync, falls eingeschaltet</text>
+        <text class="d-t" x="578" y="172">iCloud (privat, verschlüsselt)</text>
+        <text class="d-s" x="578" y="192">Geräte-Abgleich, falls eingeschaltet</text>
         <path class="d-lo" d="M450 176 H560"/>
 
         <rect class="d-ext" x="560" y="228" width="290" height="64" rx="12"/>
@@ -111,9 +111,10 @@
       <table>
         <thead><tr><th>Ziel</th><th>Was geht raus</th><th>Wann</th><th>Abschaltbar</th></tr></thead>
         <tbody>
-          <tr><td><strong>Intranet der Schule</strong></td><td>Anmeldung; beim Schreiben: Lektionsbestätigung, Absenzen, Hausaufgaben, Noten, Zimmer-Reservationen</td><td>Sync (stündlich, täglich, wöchentlich) und eigene Schreibaktionen</td><td>Schreiben nur nach Bestätigung, mit Protokoll</td></tr>
-          <tr><td><strong>iCloud</strong></td><td>die ganze Datenbank, in die private iCloud der Lehrperson</td><td>nur wenn eingeschaltet</td><td>ja, standardmässig aus</td></tr>
-          <tr><td><strong>Eingeladene Personen</strong></td><td>Titel, Zeit und Ort eines Termins per Mail</td><td>Einladen, Verschieben, Absagen</td><td>nur bei gewählten Personen</td></tr>
+          <tr><td><strong>Intranet der Schule</strong></td><td>Anmeldung; beim Schreiben: Lektionsbestätigung, Absenzen, Hausaufgaben, Noten, Zimmer- und Gerätereservationen</td><td>Sync (stündlich, täglich, wöchentlich) und eigene Schreibaktionen</td><td>Schreiben nur nach Bestätigung, mit Protokoll</td></tr>
+          <tr><td><strong>iCloud</strong></td><td>die ganze Datenbank, in die private iCloud der Lehrperson; jedes Feld verschlüsselt</td><td>nur wenn eingeschaltet</td><td>ja, standardmässig aus</td></tr>
+          <tr><td><strong>iCloud-Einstellungen</strong></td><td>Entscheide zu Terminen abonnierter Kalender, als Kürzel ohne Klartext</td><td>Bestätigen oder Ablehnen eines Abo-Termins</td><td>nach 400 Tagen gelöscht</td></tr>
+          <tr><td><strong>Eingeladene Personen</strong></td><td>Titel, Zeit und Ort eines Termins per Mail, verschickt über Apple Mail</td><td>Einladen, Verschieben, Absagen</td><td>nur bei gewählten Personen</td></tr>
           <tr><td><strong>Teams</strong></td><td>Mailadressen in einem Link, der die Teams-App öffnet</td><td>Klick auf „Teams-Chat"</td><td>–</td></tr>
           <tr><td><strong>Karten</strong></td><td>eine Adresse als Link</td><td>Klick auf eine Adresse</td><td>–</td></tr>
           <tr><td><strong>Schulkalender</strong></td><td>nichts Persönliches, nur der Abruf des Kalenders</td><td>täglich</td><td>–</td></tr>
@@ -123,26 +124,37 @@
 
     <h2>Was bewusst auf dem Mac bleibt</h2>
     <ul>
-      <li><strong>KI:</strong> Notiz-Zusammenfassungen, Mail-Auswertung und Schnellerfassung laufen mit Apple Intelligence auf dem Gerät. Der Text verlässt den Mac nicht.</li>
-      <li><strong>Mail:</strong> Die App liest Mails aus dem Mail-Programm auf dem Mac. Sie hat keinen eigenen Zugang zu Mailservern.</li>
+      <li><strong>KI:</strong> Notiz-Zusammenfassungen und das Erkennen von Eingaben laufen mit Apple Intelligence auf dem Gerät. Der Text verlässt den Mac nicht.</li>
+      <li><strong>Nachteilsausgleiche</strong> bleiben auf dem Mac, auch bei eingeschaltetem iCloud-Abgleich. Jedes Gerät holt sie selbst aus dem Intranet; den Text zeigt die App nur nach Touch ID.</li>
+      <li><strong>Writing Tools</strong> von macOS sind gesperrt. So gelangt kein Text über sie an Erweiterungen wie ChatGPT.</li>
       <li><strong>Kalender und Kontakte</strong> laufen über macOS. Die Synchronisation mit den Konten dahinter besorgt das System, nicht MySchool.</li>
-      <li><strong>Zugangsdaten</strong> liegen nur im Schlüsselbund. Anzeigen lassen sie sich nur mit Touch ID.</li>
-      <li><strong>Mitteilungen</strong> sind lokale Mitteilungen von macOS, ohne Push-Dienst.</li>
+      <li><strong>Zugangsdaten</strong> liegen nur im Schlüsselbund dieses Macs. Anzeigen lassen sie sich nur mit Touch ID.</li>
+      <li><strong>Mitteilungen</strong> sind lokale Mitteilungen von macOS, ohne Push-Dienst. Auf dem Sperrbildschirm zeigen sie einen Platzhalter statt des Inhalts.</li>
       <li><strong>Sensible Intranet-Felder</strong> wie AHV-Nummer, Heimatort oder Zivilstand werden nie gespeichert.</li>
     </ul>
 
     <h2>Was die App speichert</h2>
-    <p>Aus dem Intranet: Klassen, Schüler:innen (Name, Klasse, Mail, Telefon, Adresse, Foto, Geburtstag), Eltern, Lehrpersonen, Stundenplan, Absenzen, Hausaufgaben und Schulkalender. Noten werden nicht gespeichert, sie kommen jedes Mal live aus dem Intranet.</p>
-    <p>Eigene Daten: Notizen, Listen, Sitzordnungen, Ämtli, Punkte von Prüfungen, Einladungen sowie Termin-Vorschläge aus dem Mail-Scan (Absender, Betreff, Auszug).</p>
+    <p>Aus dem Intranet: Klassen, Schüler:innen (Name, Klasse, Mail, Telefon, Adresse, Foto, Geburtstag), Eltern, Lehrpersonen, Stundenplan, Absenzen, Hausaufgaben und Schulkalender. Noten kommen jedes Mal live aus dem Intranet; gespeichert wird nur ein Schnappschuss pro Semester im Archiv.</p>
+    <p>Eigene Daten: Notizen, Listen, Sitzordnungen, Ämtli, Punkte von Prüfungen, Unterrichtsplanung und Einladungen.</p>
+    <p>Ausserhalb der Datenbank und nie in iCloud: Nachteilsausgleiche, Zugangsdaten, die Warteschlange der Schreibaufträge und das Protokoll der Schreibzugriffe.</p>
 
-    <h2>Auf dem Beamer</h2>
-    <p>Liegt ein Fenster auf einem Beamer oder externen Bildschirm, blendet MySchool Noten, Notizen, Absenzen, Fotos und Kontaktdaten aus. Für Bildschirmfreigaben in Teams oder Zoom lässt sich der Präsentationsmodus von Hand einschalten.</p>
-
-    <h2>Offene Punkte</h2>
+    <h2>Schutz am Bildschirm</h2>
     <ul>
-      <li>Mit eingeschaltetem iCloud-Sync geht die ganze Datenbank in die private iCloud, auch Notizen und Mail-Auszüge. Ob das für Schülerdaten zulässig ist, ist noch abzuklären. Der Sync ist standardmässig aus.</li>
-      <li>Ein Löschkonzept für ehemalige Schüler:innen und archivierte Klassen fehlt noch.</li>
-      <li>Der Diagnosebericht für die Fehlersuche enthält Namen und soll pseudonymisiert werden.</li>
+      <li><strong>Präsentationsmodus:</strong> Liegt ein Fenster auf einem Beamer oder externen Bildschirm, blendet MySchool Noten, Notizen, Absenzen, Fotos, Nachteilsausgleiche und Kontaktdaten aus. Teilt man den Bildschirm oder ein MySchool-Fenster in Teams, schaltet er sich selbst ein; für andere Programme gibt es einen Kurzbefehl.</li>
+      <li><strong>Touch-ID-Sperre:</strong> Noten, Notizen, Archiv und Schüler:innen öffnen erst nach Touch ID oder dem Mac-Passwort. Sie sperren wieder beim Verlassen des Reiters, nach zwei Minuten ohne Eingabe und beim Sperren des Bildschirms. Standardmässig an.</li>
+      <li><strong>Nie in Bildschirmaufnahmen:</strong> Auf Wunsch erscheinen MySchool-Fenster in keiner Aufnahme und keiner Freigabe.</li>
+      <li><strong>Kopierte Noten</strong> bleiben auf diesem Mac, erscheinen in keinem Zwischenablage-Verlauf und werden nach drei Minuten geleert.</li>
+    </ul>
+
+    <h2>iCloud</h2>
+    <p>Wer MySchool auf mehreren Geräten nutzt, kann den Abgleich über die eigene iCloud einschalten. Er ist standardmässig aus. Jedes Feld der Datenbank ist als verschlüsseltes Feld markiert; lesbar bleiben nur Verknüpfungen zwischen Datensätzen, der Datensatztyp und Zeitstempel. Mit dem erweiterten Datenschutz für iCloud (Advanced Data Protection) ist die Verschlüsselung Ende-zu-Ende und die Daten sind auch für Apple unlesbar; ohne ihn hält Apple den Schlüssel. Wer den Abgleich nutzt, sollte ihn deshalb einschalten.</p>
+
+    <h2>Aufbewahrung</h2>
+    <ul>
+      <li>MySchool löscht Personendaten nicht von selbst. Ehemalige Schüler:innen sowie Noten- und Absenzen-Archiv bleiben erhalten, damit spätere Rückfragen beantwortbar bleiben.</li>
+      <li>Was aus dem Intranet kommt, folgt dem Intranet: Lektionen, Eltern und Nachteilsausgleiche, die es nicht mehr meldet, verschwinden beim nächsten Abgleich.</li>
+      <li>Das Protokoll der Schreibzugriffe wird nach zwölf Monaten gelöscht.</li>
+      <li>Wer alles löschen will, entfernt die App samt ihren Daten und löscht eine allfällige Kopie in der iCloud-Speicherverwaltung von macOS.</li>
     </ul>
   </div>
 </main>
