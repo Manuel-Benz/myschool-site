@@ -35,14 +35,14 @@
   <div class="huelle">
     <span class="pille himmel">Architektur</span>
     <h1 style="margin-top:14px">Wie MySchool gebaut ist</h1>
-    <p>Ein Überblick für alle, die wissen wollen, wie MySchool gebaut ist. Die App ist in Swift und SwiftUI geschrieben und läuft auf macOS; iPad und iPhone sind geplant.</p>
+    <p>Für alle, die es genauer wissen wollen (oder die ICT, die es wissen muss). Die App ist in Swift und SwiftUI geschrieben und läuft auf macOS. iPad und iPhone sind geplant.</p>
 
     <h2>Grundsätze</h2>
     <ul>
       <li><strong>Die eigene Datenbank ist das Rückgrat.</strong> Intranet und Kalender sind Datenquellen, nie Voraussetzung.</li>
       <li><strong>Offline-first.</strong> Lesen geht immer. Schreiben ins Intranet läuft über eine Warteschlange, die nachholt.</li>
       <li><strong>Manuelle Eingabe vor Sync.</strong> Jeder Bereich funktioniert auch ohne Intranet.</li>
-      <li><strong>Einfach halten.</strong> Module sind Ordner im Projekt, keine eigenen Pakete. Keine Abstraktion auf Vorrat.</li>
+      <li><strong>Einfach halten.</strong> Module sind Ordner im Projekt, keine eigenen Pakete. Nichts auf Vorrat bauen.</li>
     </ul>
 
     <h2>Bausteine</h2>
@@ -104,7 +104,7 @@
     </div>
 
     <h2>Lesen: Intranet → Mac</h2>
-    <p>Die App spricht die Schnittstelle des Intranets direkt an, ohne Webseiten auszulesen. Sie meldet sich an, holt die Daten als JSON und meldet sich bei Ablauf der Sitzung neu an. Der Sync läuft in drei Stufen:</p>
+    <p>Die App spricht direkt mit der Schnittstelle des Intranets, ohne Webseiten auszulesen. Sie meldet sich an, holt die Daten als JSON und meldet sich neu an, wenn die Sitzung abläuft. Der Sync läuft in drei Stufen:</p>
     <div class="tabelle" style="margin-top:16px">
       <table>
         <thead><tr><th>Stufe</th><th>Takt</th><th>Inhalt</th></tr></thead>
@@ -115,18 +115,18 @@
         </tbody>
       </table>
     </div>
-    <p style="margin-top:14px">Eigene Notizen hängen nie an etwas, das der Sync überschreibt. Wechselt eine Klasse im neuen Schuljahr den Namen („3b" wird „4b"), wandert alles mit.</p>
+    <p style="margin-top:14px">Eigene Notizen hängen nie an etwas, das der Sync überschreibt. Und wenn aus der „3b“ im neuen Schuljahr die „4b“ wird, wandert alles mit.</p>
 
     <h2>Schreiben: Mac → Intranet</h2>
-    <p>Lektion bestätigen, Absenzen, Hausaufgaben: Jeder solche Auftrag kommt zuerst in eine Warteschlange auf dem Mac. App oder Helfer schicken ihn ab, sobald Netz da ist. Ein Auftrag gilt erst als erledigt, wenn das Intranet ihn quittiert hat. Bis dahin zeigt die App den Zustand neben dem Häkchen an.</p>
+    <p>Lektion bestätigen, Absenzen, Hausaufgaben: Jeder solche Auftrag kommt zuerst in eine Warteschlange auf dem Mac. App oder Helfer schicken ihn ab, sobald Netz da ist. Ein Auftrag gilt erst als erledigt, wenn das Intranet ihn quittiert hat. Bis dahin siehst du den Zustand neben dem Häkchen.</p>
     <ul>
       <li>Wiederholt wird nur, was den Server sicher nicht erreicht hat, damit nichts doppelt eingetragen wird.</li>
-      <li>Das erste Schreiben fragt nach, jede Schreibaktion landet in einem Protokoll.</li>
+      <li>Beim ersten Schreiben fragt die App nach. Jede Schreibaktion landet in einem Protokoll.</li>
       <li>Noten sowie Zimmer- und Gerätereservationen gehen direkt, nur mit Netz.</li>
     </ul>
 
     <h2>Mitteilungen</h2>
-    <p>Die App plant, der Helfer führt aus: MySchool legt einen Plan mit allen fälligen Mitteilungen ab (Geburtstage, Notiz-Erinnerungen, Termine, Schulkalender), der Helfer macht daraus lokale Mitteilungen von macOS. So kommen sie auch, wenn die App geschlossen ist.</p>
+    <p>Die App plant, der Helfer führt aus: MySchool legt einen Plan mit allen fälligen Mitteilungen ab (Geburtstage, Notiz-Erinnerungen, Termine, Schulkalender) und der Helfer macht daraus lokale Mitteilungen von macOS. So kommen sie auch, wenn die App geschlossen ist.</p>
 
     <h2>Werkzeuge</h2>
     <ul>
