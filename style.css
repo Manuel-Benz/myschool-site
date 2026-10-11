@@ -253,7 +253,7 @@ tr:last-child td { border-bottom: 0; }
 .kuerzel { margin: 16px 0; }
 .kuerzel td:first-child { white-space: nowrap; width: 1%; }
 .kuerzel td:first-child kbd { margin: 1px 0; }
-.kombi { white-space: nowrap; display: inline-block; }
+.tastenkombi { white-space: nowrap; display: inline-block; }
 .beispiele { margin: 16px 0; }
 .beispiele td:first-child { width: 44%; }
 .faq dt { font-weight: 650; color: var(--text); margin-top: 18px; }
