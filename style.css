@@ -113,6 +113,7 @@ p { margin: 0; }
 
 /* Funktion: Text + Bild */
 .funktion { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 48px; align-items: center; padding: 40px 0; }
+.abschnitt-kopf + .funktion { padding-top: 0; }
 .funktion.umgekehrt { grid-template-columns: minmax(0,7fr) minmax(0,5fr); }
 .funktion.umgekehrt .text { order: 2; }
 .funktion .text h3 { font-size: 1.6rem; margin-bottom: 12px; }
