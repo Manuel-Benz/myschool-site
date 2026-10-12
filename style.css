@@ -128,7 +128,6 @@ p { margin: 0; }
 .karte.kombi p { flex: 1; }
 .quellen { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .quellen .pille { font-size: .72rem; }
-.nachsatz { margin-top: 28px; color: var(--text-2); max-width: 820px; }
 
 /* Vorher / Nachher */
 .vergleich { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
@@ -147,7 +146,7 @@ kbd { font: 600 .85em -apple-system, BlinkMacSystemFont, sans-serif; background:
 .nicht .x { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--rost-weich); color: var(--rost);
   display: grid; place-items: center; font-weight: 700; }
 
-/* Text-Seiten (Datenschutz, Architektur) */
+/* Text-Seiten (Datenschutz, Anleitung) */
 .textseite { padding: 56px 0 80px; }
 .textseite .huelle { max-width: 900px; }
 .textseite h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 14px; }
@@ -197,9 +196,6 @@ tr:last-child td { border-bottom: 0; }
   h2, .abschnitt-kopf, .kicker { break-after: avoid; }
   .vergleich, .nicht, .drei { break-inside: avoid; }
   .abschnitt > .huelle { break-inside: avoid; }
-  #mehr > .huelle, #mehr .drei { break-inside: auto; }
-  .nachsatz { break-before: avoid; }
-  #mehr .drei { grid-template-columns: repeat(3, minmax(0,1fr)); }
   .held .lead, .abschnitt-kopf p { font-size: 11pt; }
   .held .fenster { margin-top: 18px; }
   .abschnitt-kopf { margin-bottom: 16px; }
