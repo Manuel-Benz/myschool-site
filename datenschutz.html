@@ -89,8 +89,8 @@
         <path class="d-l" d="M450 92 H560"/>
 
         <rect class="d-opt" x="560" y="144" width="290" height="64" rx="12"/>
-        <text class="d-t" x="578" y="172">iCloud (privat, verschlüsselt)</text>
-        <text class="d-s" x="578" y="192">Geräte-Abgleich, in Abklärung</text>
+        <text class="d-t" x="578" y="172">iCloud: in Abklärung</text>
+        <text class="d-s" x="578" y="192">Geräte-Abgleich, privat, verschlüsselt</text>
         <path class="d-lo" d="M450 176 H560"/>
 
         <rect class="d-ext" x="560" y="228" width="290" height="64" rx="12"/>
@@ -108,7 +108,7 @@
     <ul>
       <li><strong>Offline:</strong> Alles geht auch ohne Netz. Das Intranet ist Datenquelle, keine Voraussetzung.</li>
       <li><strong>Keine Drittdienste:</strong> keine Telemetrie, keine Werbe- oder Analyse-Bibliotheken. Daten gehen nur dorthin, wo die Tabelle unten es sagt.</li>
-      <li><strong>Schreiben nur bewusst:</strong> Beim ersten Schreiben ins Intranet fragt die App nach, und jede Schreibaktion landet in einem Protokoll.</li>
+      <li><strong>Schreiben nur bewusst:</strong> Beim ersten Schreiben ins Intranet fragt die App nach und jede Schreibaktion landet in einem Protokoll.</li>
     </ul>
 
     <h2>Verbindungen nach aussen</h2>
@@ -117,8 +117,7 @@
         <thead><tr><th>Ziel</th><th>Was geht raus</th><th>Wann</th><th>Abschaltbar</th></tr></thead>
         <tbody>
           <tr><td><strong>Intranet der Schule</strong></td><td>Anmeldung; beim Schreiben: Lektionsbestätigung, Absenzen, Hausaufgaben, Noten, Zimmer- und Gerätereservationen</td><td>Sync (stündlich, täglich, wöchentlich) und eigene Schreibaktionen</td><td>Schreiben nur nach Bestätigung, mit Protokoll</td></tr>
-          <tr><td><strong>iCloud</strong></td><td>die ganze Datenbank, in deine private iCloud, jedes Feld verschlüsselt</td><td>nur wenn eingeschaltet</td><td>ja, standardmässig aus; Nutzung noch in Abklärung</td></tr>
-          <tr><td><strong>iCloud-Einstellungen</strong></td><td>Entscheide zu Terminen abonnierter Kalender, als Kürzel ohne Klartext</td><td>Bestätigen oder Ablehnen eines Abo-Termins</td><td>nach 400 Tagen gelöscht</td></tr>
+          <tr><td><strong>iCloud</strong><br><span class="pille rost">in Abklärung</span></td><td>die ganze Datenbank, in deine private iCloud, jedes Feld verschlüsselt; dazu deine Entscheide zu Terminen abonnierter oder geteilter Kalender, nur als Prüfsumme</td><td>nur wenn eingeschaltet</td><td>ja, standardmässig aus</td></tr>
           <tr><td><strong>Eingeladene Personen</strong></td><td>Titel, Zeit und Ort eines Termins per Mail, verschickt über Apple Mail</td><td>Einladen, Verschieben, Absagen</td><td>nur bei gewählten Personen</td></tr>
           <tr><td><strong>Teams</strong></td><td>Mailadressen in einem Link, der die Teams-App öffnet</td><td>Klick auf „Teams-Chat“</td><td>–</td></tr>
           <tr><td><strong>Karten</strong></td><td>eine Adresse als Link</td><td>Klick auf eine Adresse</td><td>–</td></tr>
@@ -135,31 +134,31 @@
       <li><strong>Kalender und Kontakte</strong> laufen über macOS. Den Abgleich mit den Konten dahinter macht das System, nicht MySchool.</li>
       <li><strong>Zugangsdaten</strong> liegen nur im Schlüsselbund dieses Macs. Anzeigen kannst du sie nur mit Touch ID.</li>
       <li><strong>Mitteilungen</strong> sind lokale Mitteilungen von macOS, ohne Push-Dienst. Auf dem Sperrbildschirm zeigen sie einen Platzhalter statt des Inhalts.</li>
-      <li><strong>Sensible Intranet-Felder</strong> wie AHV-Nummer, Heimatort oder Zivilstand werden nie gespeichert.</li>
     </ul>
 
     <h2>Was die App speichert</h2>
     <p>Aus dem Intranet: Klassen, Schüler:innen (Name, Klasse, Mail, Telefon, Adresse, Foto, Geburtstag), Eltern, Lehrpersonen, Stundenplan, Absenzen, Hausaufgaben und Schulkalender. Noten kommen jedes Mal live aus dem Intranet. Gespeichert wird nur ein Schnappschuss pro Semester im Archiv.</p>
     <p>Was du selbst erfasst: Notizen, Listen, Sitzordnungen, Ämtli, Punkte von Prüfungen, Unterrichtsplanung und Einladungen.</p>
-    <p>Ausserhalb der Datenbank und nie in iCloud: Nachteilsausgleiche, Zugangsdaten, die Warteschlange der Schreibaufträge und das Protokoll der Schreibzugriffe.</p>
+    <p>Ausserhalb der Datenbank und darum auch mit iCloud-Abgleich nur auf diesem Mac: Nachteilsausgleiche, Zugangsdaten, die Warteschlange der Schreibaufträge und das Protokoll der Schreibzugriffe.</p>
 
     <h2>Schutz am Bildschirm</h2>
     <ul>
-      <li><strong>Präsentationsmodus:</strong> Liegt ein Fenster auf einem Beamer oder externen Bildschirm, blendet MySchool Noten, Notizen, Absenzen, Fotos, Nachteilsausgleiche und Kontaktdaten aus. Teilst du den Bildschirm oder ein MySchool-Fenster in Teams, schaltet er sich selbst ein, und mit einem Kurzbefehl jederzeit von Hand.</li>
+      <li><strong>Präsentationsmodus:</strong> Liegt ein Fenster auf einem Beamer oder externen Bildschirm, blendet MySchool Noten, Notizen, Absenzen, Fotos, Nachteilsausgleiche und Kontaktdaten aus. Teilst du den Bildschirm oder ein MySchool-Fenster in Teams, schaltet er sich selbst ein. Von Hand geht es jederzeit mit einem Kurzbefehl.</li>
       <li><strong>Touch-ID-Sperre:</strong> Noten, Notizen, Archiv und Schüler:innen öffnen erst nach Touch ID oder dem Mac-Passwort. Sie gehen wieder zu, wenn du den Reiter wechselst, zwei Minuten nichts tust oder den Bildschirm sperrst. Standardmässig an.</li>
-      <li><strong>Nie in Bildschirmaufnahmen:</strong> Auf Wunsch erscheinen MySchool-Fenster in keiner Aufnahme und keiner Freigabe.</li>
+      <li><strong>Bildschirmaufnahmen:</strong> Auf Wunsch erscheinen MySchool-Fenster in keiner Aufnahme und keiner Freigabe.</li>
       <li><strong>Kopierte Noten</strong> bleiben auf diesem Mac, erscheinen in keinem Zwischenablage-Verlauf und werden nach drei Minuten geleert.</li>
     </ul>
 
-    <h2>iCloud</h2>
-    <p><b>Noch in Abklärung:</b> Ob der iCloud-Abgleich an der Schule genutzt werden darf, ist noch nicht entschieden. Bis dahin bleibt er aus. Brauchst du MySchool auf mehreren Geräten, kannst du den Abgleich über deine iCloud einschalten. Standardmässig ist er aus. Jedes Feld der Datenbank ist als verschlüsseltes Feld markiert. Lesbar bleiben nur Verknüpfungen zwischen Datensätzen, der Datensatztyp und Zeitstempel. Mit dem erweiterten Datenschutz für iCloud (Advanced Data Protection) ist die Verschlüsselung Ende-zu-Ende und die Daten sind auch für Apple unlesbar. Ohne ihn hält Apple den Schlüssel. Deshalb: Wer den Abgleich nutzt, schaltet den erweiterten Datenschutz bitte auch ein.</p>
+    <h2>iCloud <span class="pille rost" style="vertical-align:middle">in Abklärung</span></h2>
+    <p>Mit dem iCloud-Abgleich hast du MySchool auf mehreren eigenen Geräten. Ob er an der Schule genutzt werden darf, ist noch in Abklärung. Standardmässig ist er aus.</p>
+    <p>Eingeschaltet ist jedes Feld der Datenbank verschlüsselt. Lesbar bleiben nur Verknüpfungen zwischen Datensätzen, der Datensatztyp und Zeitstempel. Den Schlüssel hält Apple, ausser du schaltest den erweiterten Datenschutz für iCloud (Advanced Data Protection) ein: Dann ist die Verschlüsselung Ende-zu-Ende und auch Apple kann nichts lesen. Wer den Abgleich nutzen würde, müsste darum auch den erweiterten Datenschutz einschalten.</p>
 
     <h2>Aufbewahrung</h2>
     <ul>
       <li>MySchool löscht Personendaten nicht von selbst. Ehemalige Schüler:innen und das Noten- und Absenzen-Archiv bleiben, damit du spätere Rückfragen noch beantworten kannst.</li>
       <li>Was aus dem Intranet kommt, folgt dem Intranet: Lektionen, Eltern und Nachteilsausgleiche, die es nicht mehr meldet, verschwinden beim nächsten Abgleich.</li>
       <li>Das Protokoll der Schreibzugriffe wird nach zwölf Monaten gelöscht.</li>
-      <li>Willst du alles löschen, entfernst du die App samt ihren Daten und löschst eine allfällige Kopie in der iCloud-Speicherverwaltung von macOS.</li>
+      <li>Willst du alles löschen: <strong>Einstellungen › Allgemein › Alle Daten löschen…</strong> entfernt Datenbank, Einstellungen, Zugangsdaten und Mitteilungen, auf Wunsch auch eine Kopie in iCloud. Danach beendet sich MySchool und du ziehst die App in den Papierkorb. Termine und Aufgaben in deinen Kalendern bleiben.</li>
     </ul>
   </div>
 </main>
